@@ -1,0 +1,12 @@
+{
+  "name": "bimbel-taruna-mockup",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mockup website Taruna Prima (bimbel taruna) — static HTML + Tailwind CSS",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

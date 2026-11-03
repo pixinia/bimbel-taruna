@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-navy-900 font-sans text-slate-200 antialiased overflow-x-hidden;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display uppercase tracking-wide text-white;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-navy-900 rounded-sm;
+  }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply inline-flex items-center gap-3 font-display text-xs sm:text-sm uppercase tracking-[0.25em] text-gold;
+  }
+  .section-eyebrow::before {
+    content: "";
+    @apply block h-px w-8 bg-gold;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-gold px-6 py-3 font-semibold text-navy-900 shadow-lg shadow-gold/20 transition duration-300 hover:bg-gold-light hover:-translate-y-0.5 focus-visible:ring-gold;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-gold/70 px-6 py-3 font-semibold text-gold transition duration-300 hover:bg-gold hover:text-navy-900;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-semibold text-white transition duration-300 hover:border-gold hover:text-gold;
+  }
+  .glass {
+    @apply rounded-xl border border-white/10 bg-white/5 backdrop-blur-md;
+  }
+  .card {
+    @apply rounded-2xl border border-white/10 bg-navy-800 p-6 transition duration-300;
+  }
+  .card-lift {
+    @apply hover:-translate-y-1 hover:border-gold/60 hover:shadow-xl hover:shadow-black/40;
+  }
+  .bg-pattern {
+    background-image:
+      repeating-linear-gradient(135deg, rgba(201,162,39,0.06) 0 1px, transparent 1px 22px),
+      radial-gradient(circle at 20% 20%, rgba(107,122,58,0.18), transparent 45%);
+  }
+  .bg-topo {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23C9A227' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M0 40 C40 10 80 70 160 30'/%3E%3Cpath d='M0 90 C50 60 90 120 160 80'/%3E%3Cpath d='M0 140 C40 110 100 160 160 130'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .js .reveal {
+    @apply translate-y-8 opacity-0 transition duration-700 ease-out;
+  }
+  .js .reveal.is-visible {
+    @apply translate-y-0 opacity-100;
+  }
+  .nav-link {
+    @apply relative py-2 text-sm font-medium text-slate-300 transition hover:text-gold;
+  }
+  .nav-link[aria-current="page"] {
+    @apply text-gold;
+  }
+  .nav-link[aria-current="page"]::after {
+    content: "";
+    @apply absolute -bottom-0.5 left-0 right-0 h-0.5 bg-gold;
+  }
+  .faq-item[open] .faq-icon {
+    @apply rotate-45;
+  }
+}
+
+@layer utilities {
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal {
+      @apply translate-y-0 opacity-100;
+    }
+    .marquee-track {
+      animation: none !important;
+    }
+  }
+}
+
+@layer components {
+  #site-header.is-scrolled {
+    @apply bg-navy-900/95 shadow-lg shadow-black/30 backdrop-blur-md;
+  }
+  .marquee-track {
+    @apply flex w-max animate-marquee;
+  }
+  .marquee-wrap:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
