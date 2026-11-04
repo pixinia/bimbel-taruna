@@ -189,7 +189,6 @@ html.js-anim {
 .js-anim [data-anim="ladder"] .ladder-num {
   transition: color .3s var(--ease-reveal);
 }
-.js-anim [data-anim="ladder"] li.is-reached .ladder-num { color: theme('colors.merah'); }
 
 /* --- Clip reveals: pricing unit wipes down, testimonial portrait wipes up --- */
 .js-anim [data-anim="unit"] {
@@ -237,4 +236,93 @@ html.js-anim {
   visibility: visible;
   transform: none;
   transition-delay: 0s;
+}
+
+/* --- v5 additions (reviewed by hand) --- */
+/* Word masks: generous vertical padding so Big Shoulders ascenders/descenders
+   are never clipped at the tight hero line-height. */
+.js-anim [data-anim="words"] .word {
+  padding: .06em 0 .2em;
+  margin: -.06em 0 -.2em;
+}
+
+/* Rule draw: the real 1px top border goes transparent (layout untouched)
+   and a pseudo hairline scales in from the left. */
+.js-anim .rule-top { position: relative; border-top-color: transparent !important; }
+.js-anim .rule-top::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -1px;
+  height: 1px;
+  background: var(--rule-c, #D9D9D4);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .9s var(--ease-line) calc(var(--i, 0) * var(--step, 70ms) + var(--d, 0ms) + 80ms);
+}
+.js-anim .rule-top.is-in::before,
+.js-anim .is-in > .rule-top::before { transform: scaleX(1); }
+
+/* Ledger rows: each row enters on its own, slides from the left while its rule draws. */
+.js-anim [data-anim="row"] {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity .6s var(--ease-reveal), transform .7s var(--ease-reveal);
+}
+.js-anim [data-anim="row"].is-in { opacity: 1; transform: none; }
+
+/* Ladder: rules draw (tinta) and numbers ink from garis to loreng as the
+   reader scrolls down to each step (one way). */
+.js-anim [data-anim="ladder"] > li.rule-top::before { transition-delay: 0ms; transition-duration: .7s; }
+.js-anim [data-anim="ladder"].is-in > li.rule-top::before { transform: scaleX(0); }
+.js-anim [data-anim="ladder"] > li.is-reached.rule-top::before { transform: scaleX(1); }
+.js-anim [data-anim="ladder"] .ladder-num { color: #D9D9D4; transition: color .5s var(--ease-reveal) .15s; }
+.js-anim [data-anim="ladder"] li.is-reached .ladder-num { color: #3E4A2C; }
+
+/* Stamp honours its data-delay. */
+.js-anim [data-anim="stamp"].is-in { animation-delay: var(--d, 0ms); }
+
+/* Header tightens once scrolled. */
+#site-header > div:first-child { transition: padding .3s cubic-bezier(.2,.7,.1,1); }
+#site-header.is-scrolled > div:first-child { padding-top: .625rem; padding-bottom: .625rem; }
+#site-header .brand-mark { transition: transform .3s cubic-bezier(.2,.7,.1,1), color .3s; }
+#site-header.is-scrolled .brand-mark { transform: scale(.9); }
+
+/* Nav underline draws in from the left on hover; current page keeps it. */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 2px;
+  background: #B3122A;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .25s cubic-bezier(.2,.7,.1,1);
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after { transform: scaleX(1); }
+
+/* Buttons: crisp colour change, 1px press. */
+.btn-primary, .btn-outline, .btn-outline-light {
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .1s ease;
+}
+.btn-primary:active, .btn-outline:active, .btn-outline-light:active { transform: translateY(1px); }
+
+/* Ledger photo zoom + title ink on hover (pointer devices only). */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .ledger-row > div:first-child img { transition: transform .5s cubic-bezier(.2,.7,.1,1); }
+  .ledger-row:hover > div:first-child img { transform: scale(1.06); }
+  .ledger-row h3 { transition: color .25s ease; }
+  .ledger-row:hover h3 { color: #B3122A; }
+}
+
+/* Mobile menu links step in each time the menu opens. */
+@keyframes menu-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.js-anim #mobile-menu.menu-open a { animation: menu-in .35s cubic-bezier(.2,.7,.1,1) both; animation-delay: calc(var(--i, 0) * 40ms); }
+
+/* FAQ icon turns smoothly. */
+.faq-icon svg { transition: transform .25s cubic-bezier(.2,.7,.1,1); }
+
+/* Reduced motion: never transform for parallax/zoom, everything at rest. */
+@media (prefers-reduced-motion: reduce) {
+  [data-parallax] { transform: none !important; }
 }

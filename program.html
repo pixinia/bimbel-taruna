@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js-anim');setTimeout(function(){if(!window.__tpMotion)document.documentElement.classList.remove('js-anim')},2500)}</script>
   <title>Program Bimbel | Taruna Prima</title>
   <meta name="description" content="Program bimbel Taruna Prima untuk Akmil, Akpol, AAL, AAU, Bintara dan kedinasan. Segera hadir.">
   <meta name="robots" content="noindex">
@@ -71,9 +71,9 @@
 <main id="main">
 <section class="bg-abu" aria-labelledby="page-title">
   <div class="mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-center px-5 pb-24 pt-32 sm:px-6 lg:px-8 lg:pt-36">
-    <h1 id="page-title" class="font-display text-6xl leading-[0.95] sm:text-7xl lg:text-8xl">Program bimbel</h1>
-    <p class="mt-6 max-w-prose text-base leading-[1.65] sm:text-lg">Segera hadir: detail kurikulum per instansi, jadwal kelas, dan perbandingan paket Online Class, Intensif, dan Karantina.</p>
-    <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+    <h1 id="page-title" data-anim="words" class="font-display text-6xl leading-[0.95] sm:text-7xl lg:text-8xl">Program bimbel</h1>
+    <p data-anim="fade" data-delay="350" class="mt-6 max-w-prose text-base leading-[1.65] sm:text-lg">Segera hadir: detail kurikulum per instansi, jadwal kelas, dan perbandingan paket Online Class, Intensif, dan Karantina.</p>
+    <div data-anim="fade" data-delay="500" class="mt-10 flex flex-col gap-3 sm:flex-row">
       <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
       <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary">Konsultasi via WhatsApp</a>
       <a href="/" class="btn-outline">Kembali ke Beranda</a>
@@ -130,7 +130,7 @@
   </div>
 </footer>
 <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
-<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" aria-label="Chat WhatsApp untuk konsultasi" class="fixed bottom-5 right-5 z-40 isolate flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1eb857] focus-visible:ring-white">
+<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" aria-label="Chat WhatsApp untuk konsultasi" data-wa-float class="fixed bottom-5 right-5 z-40 isolate flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1eb857] focus-visible:ring-white">
   <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 10h6M9 13h4"/></svg>
 </a>
 </body>

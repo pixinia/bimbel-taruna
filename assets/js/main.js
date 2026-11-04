@@ -5,6 +5,7 @@
 
   // Motion gate: every hidden-before-animate state in CSS lives under html.js-anim.
   // (Head pages also set this inline to avoid a flash; this is the safety net.)
+  window.__tpMotion = 1;
   if (!reduceMotion) document.documentElement.classList.add('js-anim');
 
   function each(list, fn) { Array.prototype.forEach.call(list, fn); }
@@ -148,7 +149,7 @@
         if (en.target.hasAttribute('data-count')) runCount(en.target);
         io.unobserve(en.target);
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+    }, { threshold: 0.01, rootMargin: '0px 0px -10% 0px' });
     each(revealTargets, function (el) { io.observe(el); });
   } else {
     each(revealTargets, function (el) { el.classList.add('is-in'); });
@@ -189,7 +190,7 @@
         ladderLine.style.setProperty('--lp', Math.max(0, Math.min(1, (mid - r.top) / Math.max(1, r.height))).toFixed(4));
       }
       each(ladderItems, function (li) {
-        li.classList.toggle('is-reached', li.getBoundingClientRect().top < mid);
+        if (li.getBoundingClientRect().top < vh * 0.72) li.classList.add('is-reached');
       });
     }
     if (waFloat && !waShown && window.scrollY > (heroSection ? heroSection.offsetHeight * 0.4 : 240)) {

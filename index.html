@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js-anim');setTimeout(function(){if(!window.__tpMotion)document.documentElement.classList.remove('js-anim')},2500)}</script>
   <title>Bimbel Taruna Akmil, Akpol, AAL, AAU & Bintara | Taruna Prima</title>
   <meta name="description" content="Bimbel Taruna untuk Akmil, Akpol, AAL, AAU, Bintara & kedinasan. Bimbel akmil, bimbel akpol, tryout CAT, psikotes & samapta terarah.">
 
@@ -71,8 +71,8 @@
 </header>
 <main id="main">
 <section class="relative flex min-h-[100svh] flex-col overflow-hidden bg-tinta" aria-labelledby="hero-title">
-  <img src="/assets/header-poster.webp" alt="" width="1280" height="720" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover object-center" aria-hidden="true">
-  <video class="absolute inset-0 h-full w-full object-cover object-center motion-reduce:hidden" autoplay muted loop playsinline preload="metadata" poster="/assets/header-poster.webp" aria-hidden="true" data-hero-video>
+  <img src="/assets/header-poster.webp" alt="" width="1280" height="720" fetchpriority="high" data-parallax="0.15" data-parallax-scale="1.08" data-parallax-max="80" class="absolute inset-0 h-full w-full object-cover object-center" aria-hidden="true">
+  <video class="absolute inset-0 h-full w-full object-cover object-center motion-reduce:hidden" autoplay muted loop playsinline preload="metadata" poster="/assets/header-poster.webp" aria-hidden="true" data-hero-video data-parallax="0.15" data-parallax-scale="1.08" data-parallax-max="80">
     <source src="/assets/header.webm" type="video/webm">
     <source src="/assets/header.mp4" type="video/mp4">
   </video>
@@ -80,22 +80,22 @@
   <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-tinta/85 via-tinta/40 to-transparent" aria-hidden="true"></div>
   <div class="relative mx-auto flex w-full max-w-7xl flex-1 flex-col px-5 pb-6 pt-24 sm:px-6 lg:px-8">
     <div class="mt-auto">
-      <h1 id="hero-title" class="font-display text-[3.5rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-[7rem] xl:text-[8rem]">Langkah pertama menuju<br class="hidden lg:block"> seragam impian</h1>
+      <h1 id="hero-title" data-anim="words" style="--ws:45ms;--wd:.8s" class="font-display text-[3.5rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-[7rem] xl:text-[8rem]">Langkah pertama menuju<br class="hidden lg:block"> seragam impian</h1>
       <div class="mt-10 grid gap-x-12 gap-y-8 lg:grid-cols-12">
-        <p class="max-w-prose text-base leading-[1.65] text-white/85 sm:text-lg lg:col-span-6">Persiapan terarah untuk seleksi Akademi TNI, Akpol, Bintara/Tamtama &amp; Sekolah Kedinasan: akademik, psikotes, samapta, kesehatan, hingga wawancara, dibimbing mentor berpengalaman dengan harga transparan.</p>
-        <div class="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:col-start-8 lg:self-end">
+        <p data-anim="fade" data-delay="550" class="max-w-prose text-base leading-[1.65] text-white/85 sm:text-lg lg:col-span-6">Persiapan terarah untuk seleksi Akademi TNI, Akpol, Bintara/Tamtama &amp; Sekolah Kedinasan: akademik, psikotes, samapta, kesehatan, hingga wawancara, dibimbing mentor berpengalaman dengan harga transparan.</p>
+        <div data-anim="fade" data-delay="700" class="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:col-start-8 lg:self-end">
           <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
           <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary">Konsultasi via WhatsApp</a>
           <a href="#program" class="btn-outline-light">Lihat Program</a>
         </div>
       </div>
     </div>
-    <div class="mt-10 border-t border-white/25 pt-5">
+    <div class="relative mt-10 pt-5"><span data-anim="rule" data-delay="750" aria-hidden="true" class="absolute inset-x-0 top-0 h-px bg-white/25"></span>
       <dl class="grid grid-cols-2 gap-x-10 gap-y-5 sm:flex sm:flex-wrap sm:gap-x-10 sm:gap-y-4">
-        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd class="tnum font-display text-2xl font-bold text-white sm:text-3xl">1.200+</dd><dt class="text-sm text-white/70">siswa dibimbing</dt></div>
-        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd class="tnum font-display text-2xl font-bold text-white sm:text-3xl">48</dd><dt class="text-sm text-white/70">tryout CAT per tahun</dt></div>
-        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd class="tnum font-display text-2xl font-bold text-white sm:text-3xl">6</dd><dt class="text-sm text-white/70">jalur instansi</dt></div>
-        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd class="tnum font-display text-2xl font-bold text-white sm:text-3xl">4.8/5</dd><dt class="text-sm text-white/70">rating kepuasan</dt></div>
+        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd data-count class="tnum font-display text-2xl font-bold text-white sm:text-3xl">1.200+</dd><dt class="text-sm text-white/70">siswa dibimbing</dt></div>
+        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd data-count class="tnum font-display text-2xl font-bold text-white sm:text-3xl">48</dd><dt class="text-sm text-white/70">tryout CAT per tahun</dt></div>
+        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd data-count class="tnum font-display text-2xl font-bold text-white sm:text-3xl">6</dd><dt class="text-sm text-white/70">jalur instansi</dt></div>
+        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd data-count class="tnum font-display text-2xl font-bold text-white sm:text-3xl">4.8/5</dd><dt class="text-sm text-white/70">rating kepuasan</dt></div>
       </dl>
       <p class="mt-4 text-xs text-white/70">*Angka contoh untuk mockup.</p>
     </div>
@@ -105,7 +105,7 @@
 <section id="marquee" aria-label="Instansi target" class="border-b border-garis bg-kertas py-16 lg:py-20">
   <div class="mx-auto grid max-w-7xl items-center gap-8 px-5 sm:px-6 lg:grid-cols-[9rem_minmax(0,1fr)] lg:gap-12 lg:px-8">
     <p class="max-w-[11rem] text-sm font-semibold leading-snug text-tinta">Jalur yang kami latih</p>
-    <ul class="roster border-t border-garis sm:border-t-0" aria-label="AKMIL, AKPOL, AAL, AAU, Bintara TNI, Bintara Polri, Tamtama, SIPSS, Sekolah Kedinasan, UNHAN">
+    <ul data-anim="roster" class="roster border-t border-garis sm:border-t-0" aria-label="AKMIL, AKPOL, AAL, AAU, Bintara TNI, Bintara Polri, Tamtama, SIPSS, Sekolah Kedinasan, UNHAN">
           <li><img src="/assets/logos/akmil.webp" alt="Logo Akmil" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">AKMIL</span></li>
           <li><img src="/assets/logos/akpol.webp" alt="Logo Akpol" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">AKPOL</span></li>
           <li><span aria-hidden="true" class="flex h-14 w-14 items-center justify-center border border-garis bg-white text-tinta"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M5 14a7 7 0 0014 0"/></svg></span><span class="text-sm font-semibold text-tinta">AAL</span></li>
@@ -123,11 +123,11 @@
 <section id="program" class="bg-kertas py-24 lg:py-36" aria-labelledby="program-title">
   <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
     <div class="grid gap-5 lg:grid-cols-12 lg:gap-x-8">
-      <h2 id="program-title" class="font-display text-5xl leading-[1.0] lg:col-span-5 lg:text-7xl">Program per instansi</h2>
-      <p class="max-w-prose self-end text-base leading-[1.65] lg:col-span-6 lg:col-start-7">Materi disesuaikan dengan karakter seleksi tiap instansi. Pilih target Anda, kami bantu rencanakan.</p>
+      <h2 id="program-title" data-anim="words" class="font-display text-5xl leading-[1.0] lg:col-span-5 lg:text-7xl">Program per instansi</h2>
+      <p data-anim="fade" data-delay="250" class="max-w-prose self-end text-base leading-[1.65] lg:col-span-6 lg:col-start-7">Materi disesuaikan dengan karakter seleksi tiap instansi. Pilih target Anda, kami bantu rencanakan.</p>
     </div>
     <div class="mt-12 border-b border-garis lg:mt-16">
-      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+      <article data-anim="row" class="ledger-row rule-top grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
         <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
           <img src="/assets/img/prog-akmil.webp" alt="Taruna Akmil berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
         </div>
@@ -147,7 +147,7 @@
           <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
         </div>
       </article>
-      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+      <article data-anim="row" class="ledger-row rule-top grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
         <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
           <img src="/assets/img/prog-akpol.webp" alt="Taruna Akpol berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
         </div>
@@ -167,7 +167,7 @@
           <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
         </div>
       </article>
-      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+      <article data-anim="row" class="ledger-row rule-top grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
         <div class="aspect-video overflow-hidden border border-garis bg-white lg:col-span-3 lg:aspect-[4/3]">
           <img src="/assets/img/flag.webp" alt="" width="1400" height="781" loading="lazy" class="h-full w-full object-contain mix-blend-multiply">
         </div>
@@ -187,7 +187,7 @@
           <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
         </div>
       </article>
-      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+      <article data-anim="row" class="ledger-row rule-top grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
         <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
           <img src="/assets/img/prog-aau.webp" alt="Taruna AAU berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
         </div>
@@ -207,7 +207,7 @@
           <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
         </div>
       </article>
-      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+      <article data-anim="row" class="ledger-row rule-top grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
         <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
           <img src="/assets/img/prog-bintara.webp" alt="Peserta Bintara berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
         </div>
@@ -227,7 +227,7 @@
           <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
         </div>
       </article>
-      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+      <article data-anim="row" class="ledger-row rule-top grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
         <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
           <img src="/assets/img/prog-kedinasan.webp" alt="Peserta Sekolah Kedinasan berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
         </div>
@@ -254,21 +254,21 @@
 <section id="keunggulan" class="bg-abu py-24 lg:py-36" aria-labelledby="keunggulan-title">
   <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-12 lg:gap-x-16 lg:px-8">
     <div class="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
-      <h2 id="keunggulan-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Persiapan lengkap, satu atap</h2>
+      <h2 id="keunggulan-title" data-anim="words" class="font-display text-5xl leading-[1.0] lg:text-7xl">Persiapan lengkap, satu atap</h2>
       <p class="mt-6 max-w-prose text-base leading-[1.65]">Dari akademik hingga mental, setiap aspek seleksi kami latih secara terstruktur. Orang tua juga mendapat laporan progres berkala, sehingga Anda ikut memantau perkembangan putra-putri.</p>
-      <ul class="mt-8 space-y-2.5">
+      <ul data-anim="stagger" data-delay="300" class="mt-8 space-y-2.5">
         <li class="flex items-center gap-3 text-base font-medium text-tinta"><span aria-hidden="true" class="h-2 w-2 shrink-0 bg-merah"></span>Laporan progres untuk orang tua</li>
         <li class="flex items-center gap-3 text-base font-medium text-tinta"><span aria-hidden="true" class="h-2 w-2 shrink-0 bg-merah"></span>Mentor berpengalaman</li>
       </ul>
     </div>
     <div class="lg:col-span-7 lg:col-start-6">
-      <dl class="grid gap-x-12 sm:grid-cols-2">
-        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Tryout CAT berkala</dt><dd class="mt-2 text-base leading-[1.65]">Simulasi seperti tes asli, lengkap dengan ranking dan pembahasan tiap soal.</dd></div>
-        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Psikotes</dt><dd class="mt-2 text-base leading-[1.65]">Latihan kecerdasan, kecermatan, dan kepribadian, termasuk pola tes gaya Kraepelin &amp; MMPI.</dd></div>
-        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Samapta &amp; Renang</dt><dd class="mt-2 text-base leading-[1.65]">Lari 12 menit, pull up, push up, sit up, shuttle run, dan renang, dengan coaching bertahap.</dd></div>
-        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Panduan Kesehatan</dt><dd class="mt-2 text-base leading-[1.65]">Persiapan rikkes: tinggi/berat badan, mata, buta warna, gigi, dan lainnya. Arahan, bukan pemeriksaan medis.</dd></div>
-        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Akademik</dt><dd class="mt-2 text-base leading-[1.65]">TPA, Matematika, B. Inggris, Wawasan Kebangsaan, dan Pengetahuan Umum.</dd></div>
-        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Mentor Alumni &amp; Wawancara</dt><dd class="mt-2 text-base leading-[1.65]">Pendampingan wawancara dan kesiapan mental bersama alumni yang pernah lolos.</dd></div>
+      <dl data-anim="dossier" class="grid gap-x-12 sm:grid-cols-2">
+        <div class="rule-top border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Tryout CAT berkala</dt><dd class="mt-2 text-base leading-[1.65]">Simulasi seperti tes asli, lengkap dengan ranking dan pembahasan tiap soal.</dd></div>
+        <div class="rule-top border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Psikotes</dt><dd class="mt-2 text-base leading-[1.65]">Latihan kecerdasan, kecermatan, dan kepribadian, termasuk pola tes gaya Kraepelin &amp; MMPI.</dd></div>
+        <div class="rule-top border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Samapta &amp; Renang</dt><dd class="mt-2 text-base leading-[1.65]">Lari 12 menit, pull up, push up, sit up, shuttle run, dan renang, dengan coaching bertahap.</dd></div>
+        <div class="rule-top border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Panduan Kesehatan</dt><dd class="mt-2 text-base leading-[1.65]">Persiapan rikkes: tinggi/berat badan, mata, buta warna, gigi, dan lainnya. Arahan, bukan pemeriksaan medis.</dd></div>
+        <div class="rule-top border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Akademik</dt><dd class="mt-2 text-base leading-[1.65]">TPA, Matematika, B. Inggris, Wawasan Kebangsaan, dan Pengetahuan Umum.</dd></div>
+        <div class="rule-top border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Mentor Alumni &amp; Wawancara</dt><dd class="mt-2 text-base leading-[1.65]">Pendampingan wawancara dan kesiapan mental bersama alumni yang pernah lolos.</dd></div>
       </dl>
     </div>
   </div>
@@ -278,71 +278,71 @@
   <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
     <div class="grid items-end gap-8 lg:grid-cols-12">
       <div class="lg:col-span-7">
-        <h2 id="tahapan-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Tahapan seleksi</h2>
+        <h2 id="tahapan-title" data-anim="words" class="font-display text-5xl leading-[1.0] lg:text-7xl">Tahapan seleksi</h2>
         <p class="mt-5 max-w-prose text-base leading-[1.65]">Tujuh tahap umum seleksi. Kami melatih setiap tahap sesuai urutannya.</p>
       </div>
       <div class="flex justify-end lg:relative lg:z-10 lg:col-span-4 lg:col-start-9 lg:-mr-4 xl:-mr-16 lg:-mb-20">
         <img src="/assets/img/roadmap-model.webp" alt="Taruna berseragam menunjuk tahapan seleksi" width="894" height="1200" loading="lazy" class="max-h-44 w-auto object-contain sm:max-h-56 lg:max-h-[28rem]">
       </div>
     </div>
-    <ol class="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
-          <li class="border-t border-tinta pt-5">
+    <ol data-anim="ladder" class="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+          <li class="rule-top border-t border-tinta pt-5" style="--rule-c:#1B1F23">
             <div class="flex items-start gap-4">
-              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">1</p>
+              <p class="ladder-num tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">1</p>
               <div class="min-w-0">
                 <h3 class="text-lg font-bold leading-snug">Pendaftaran &amp; Administrasi</h3>
                 <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Berkas, jadwal, dan syarat administrasi dicek sejak awal.</p>
               </div>
             </div>
           </li>
-          <li class="border-t border-tinta pt-5">
+          <li class="rule-top border-t border-tinta pt-5" style="--rule-c:#1B1F23">
             <div class="flex items-start gap-4">
-              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">2</p>
+              <p class="ladder-num tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">2</p>
               <div class="min-w-0">
                 <h3 class="text-lg font-bold leading-snug">Pemeriksaan Kesehatan (Rikkes)</h3>
                 <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Panduan persiapan fisik dan pengenalan prosedur rikkes.</p>
               </div>
             </div>
           </li>
-          <li class="border-t border-tinta pt-5">
+          <li class="rule-top border-t border-tinta pt-5" style="--rule-c:#1B1F23">
             <div class="flex items-start gap-4">
-              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">3</p>
+              <p class="ladder-num tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">3</p>
               <div class="min-w-0">
                 <h3 class="text-lg font-bold leading-snug">Tes Psikologi</h3>
                 <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Latihan psikotes dan simulasi pola soal kepribadian.</p>
               </div>
             </div>
           </li>
-          <li class="border-t border-tinta pt-5">
+          <li class="rule-top border-t border-tinta pt-5" style="--rule-c:#1B1F23">
             <div class="flex items-start gap-4">
-              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">4</p>
+              <p class="ladder-num tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">4</p>
               <div class="min-w-0">
                 <h3 class="text-lg font-bold leading-snug">Tes Akademik</h3>
                 <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> TPA, matematika, bahasa Inggris, dan pengetahuan umum.</p>
               </div>
             </div>
           </li>
-          <li class="border-t border-tinta pt-5">
+          <li class="rule-top border-t border-tinta pt-5" style="--rule-c:#1B1F23">
             <div class="flex items-start gap-4">
-              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">5</p>
+              <p class="ladder-num tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">5</p>
               <div class="min-w-0">
                 <h3 class="text-lg font-bold leading-snug">Tes Kesamaptaan Jasmani &amp; Renang</h3>
                 <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Coaching lari, kekuatan, dan renang bertahap.</p>
               </div>
             </div>
           </li>
-          <li class="border-t border-tinta pt-5">
+          <li class="rule-top border-t border-tinta pt-5" style="--rule-c:#1B1F23">
             <div class="flex items-start gap-4">
-              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">6</p>
+              <p class="ladder-num tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">6</p>
               <div class="min-w-0">
                 <h3 class="text-lg font-bold leading-snug">Wawancara / Mental Ideologi</h3>
                 <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Latihan wawancara dan penguatan wawasan kebangsaan.</p>
               </div>
             </div>
           </li>
-          <li class="border-t border-tinta pt-5">
+          <li class="rule-top border-t border-tinta pt-5" style="--rule-c:#1B1F23">
             <div class="flex items-start gap-4">
-              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">7</p>
+              <p class="ladder-num tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">7</p>
               <div class="min-w-0">
                 <h3 class="text-lg font-bold leading-snug">Pantukhir (Penentuan Akhir)</h3>
                 <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Evaluasi akhir dan kesiapan menjalani pendidikan.</p>
@@ -356,8 +356,8 @@
 
 <section id="harga" class="bg-abu py-24 lg:py-36" aria-labelledby="harga-title">
   <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-    <h2 id="harga-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Harga jelas, tanpa biaya tersembunyi</h2>
-    <div class="mt-12 border border-garis bg-white lg:mt-16">
+    <h2 id="harga-title" data-anim="words" class="font-display text-5xl leading-[1.0] lg:text-7xl">Harga jelas, tanpa biaya tersembunyi</h2>
+    <div data-anim="unit" class="mt-12 border border-garis bg-white lg:mt-16">
       <div class="grid divide-y divide-garis md:grid-cols-3 md:divide-x md:divide-y-0">
         <article class="flex flex-col p-8 lg:p-10">
           <span class="tag w-fit">Harga contoh</span>
@@ -422,21 +422,21 @@
   <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
     <div class="grid gap-10 border border-tinta bg-white p-8 sm:p-10 lg:grid-cols-12 lg:gap-x-16 lg:p-14">
       <div class="lg:col-span-8">
-        <h2 id="garansi-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Belum lulus? Ikut ulang gratis.</h2>
+        <h2 id="garansi-title" data-anim="words" class="font-display text-5xl leading-[1.0] lg:text-7xl">Belum lulus? Ikut ulang gratis.</h2>
         <p class="mt-6 max-w-prose text-base leading-[1.65]">Jika peserta paket Intensif atau Karantina belum lolos seleksi pada tahun yang sama, boleh mengikuti ulang program yang sama pada periode berikutnya tanpa biaya bimbel.</p>
         <p class="mt-8 max-w-prose border border-garis bg-abu p-6 text-base font-semibold leading-[1.65] text-tinta">Kami tidak menjanjikan kelulusan. Tidak ada bimbel yang bisa menjamin hasil seleksi negara. Yang kami jamin adalah proses persiapan yang serius dan terukur.</p>
         <h3 class="mt-12 font-sans text-lg font-bold">Syarat &amp; Ketentuan (contoh)</h3>
-        <ul class="mt-4 border-b border-garis text-base leading-[1.65]">
-          <li class="border-t border-garis py-4">Kehadiran minimal 90% sesi kelas.</li>
-          <li class="border-t border-garis py-4">Mengikuti minimal 80% tryout CAT yang dijadwalkan.</li>
-          <li class="border-t border-garis py-4">Memenuhi syarat administrasi instansi tujuan.</li>
-          <li class="border-t border-garis py-4">Klaim maksimal 30 hari setelah pengumuman hasil.</li>
-          <li class="border-t border-garis py-4">Garansi berlaku 1x per peserta.</li>
+        <ul data-anim="stagger" class="mt-4 border-b border-garis text-base leading-[1.65]">
+          <li class="rule-top border-t border-garis py-4">Kehadiran minimal 90% sesi kelas.</li>
+          <li class="rule-top border-t border-garis py-4">Mengikuti minimal 80% tryout CAT yang dijadwalkan.</li>
+          <li class="rule-top border-t border-garis py-4">Memenuhi syarat administrasi instansi tujuan.</li>
+          <li class="rule-top border-t border-garis py-4">Klaim maksimal 30 hari setelah pengumuman hasil.</li>
+          <li class="rule-top border-t border-garis py-4">Garansi berlaku 1x per peserta.</li>
         </ul>
         <a href="/tentang" class="mt-8 inline-block font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:text-merah hover:decoration-merah">Baca S&amp;K lengkap</a>
       </div>
       <div class="flex items-center justify-center lg:col-span-4">
-        <div role="img" aria-label="Stempel garansi: ikut ulang gratis, S&K berlaku" class="relative flex h-56 w-56 shrink-0 -rotate-[8deg] flex-col items-center justify-center gap-3 rounded-full border-[3px] border-merah px-8 text-center text-merah sm:h-64 sm:w-64">
+        <div data-anim="stamp" data-delay="250" style="--stamp-rot:-8deg" role="img" aria-label="Stempel garansi: ikut ulang gratis, S&K berlaku" class="relative flex h-56 w-56 shrink-0 -rotate-[8deg] flex-col items-center justify-center gap-3 rounded-full border-[3px] border-merah px-8 text-center text-merah sm:h-64 sm:w-64">
           <span aria-hidden="true" class="absolute inset-[7px] rounded-full border-[1.5px] border-current"></span>
           <p class="font-display text-4xl font-bold leading-[1.0]">Ikut ulang gratis</p>
           <span aria-hidden="true" class="h-px w-16 bg-current"></span>
@@ -450,15 +450,15 @@
 <section id="testimoni" class="bg-abu py-24 lg:py-36" aria-labelledby="testi-title">
   <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
     <div class="flex flex-wrap items-end justify-between gap-4">
-      <h2 id="testi-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Cerita taruna kami</h2>
+      <h2 id="testi-title" data-anim="words" class="font-display text-5xl leading-[1.0] lg:text-7xl">Cerita taruna kami</h2>
       <span class="tag">Testimoni contoh, akan diganti testimoni asli dengan izin</span>
     </div>
     <div class="mt-12 grid gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-x-12">
       <figure class="border border-garis bg-white p-8 lg:col-span-7 lg:p-12">
         <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
-          <img src="/assets/img/testi-t1.webp" alt="" width="400" height="400" loading="lazy" class="h-48 w-40 shrink-0 self-start object-cover object-top">
+          <div data-anim="clip" class="h-48 w-40 shrink-0 self-start overflow-hidden"><img src="/assets/img/testi-t1.webp" alt="" width="400" height="400" loading="lazy" class="h-full w-full object-cover object-top"></div>
           <div class="min-w-0">
-            <blockquote class="max-w-prose text-xl font-medium leading-[1.5] text-tinta lg:text-2xl">Latihan wawancara dan simulasi psikotes benar-benar membantu saya tetap tenang di hari seleksi.</blockquote>
+            <blockquote data-anim="quote" data-delay="300" class="max-w-prose text-xl font-medium leading-[1.5] text-tinta lg:text-2xl">Latihan wawancara dan simulasi psikotes benar-benar membantu saya tetap tenang di hari seleksi.</blockquote>
             <figcaption class="mt-6">
               <p class="font-display text-3xl leading-[1.05]">Rizky A. (contoh)</p>
               <p class="mt-1 text-sm font-semibold text-loreng">Lolos Bintara TNI 2026 (contoh)</p>
@@ -467,7 +467,7 @@
         </div>
       </figure>
       <div class="lg:col-span-5">
-        <figure class="border-t border-tinta pt-6">
+        <figure data-anim="fade" class="border-t border-tinta pt-6">
           <blockquote class="text-base leading-[1.65]">Coaching samapta yang bertahap membuat fisik saya siap tanpa cedera. Laporan progresnya juga jelas.</blockquote>
           <figcaption class="mt-5 flex items-center gap-4">
             <img src="/assets/img/testi-t2.webp" alt="" width="400" height="400" loading="lazy" class="h-14 w-14 shrink-0 rounded-full object-cover object-top">
@@ -477,7 +477,7 @@
             </div>
           </figcaption>
         </figure>
-        <figure class="mt-10 border-t border-tinta pt-6">
+        <figure data-anim="fade" data-delay="120" class="mt-10 border-t border-tinta pt-6">
           <blockquote class="text-base leading-[1.65]">Tryout mingguannya seperti tes asli. Pembahasannya rinci sehingga saya tahu di mana harus memperbaiki.</blockquote>
           <figcaption class="mt-5 flex items-center gap-4">
             <img src="/assets/img/testi-t3.webp" alt="" width="400" height="400" loading="lazy" class="h-14 w-14 shrink-0 rounded-full object-cover object-top">
@@ -495,7 +495,7 @@
 <section id="faq" class="bg-kertas py-24 lg:py-36" aria-labelledby="faq-title">
   <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-12 lg:gap-x-16 lg:px-8">
     <div class="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
-      <h2 id="faq-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Pertanyaan umum</h2>
+      <h2 id="faq-title" data-anim="words" class="font-display text-5xl leading-[1.0] lg:text-7xl">Pertanyaan umum</h2>
       <p class="mt-5 max-w-prose text-base leading-[1.65]">Belum menemukan jawaban? Hubungi kami langsung lewat WhatsApp.</p>
       <img src="/assets/img/faq-model.webp" alt="Mentor berseragam menunjuk ke daftar pertanyaan" width="713" height="1200" loading="lazy" class="mt-10 hidden w-full max-w-xs lg:block">
     </div>
@@ -538,16 +538,16 @@
   <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-6 lg:grid-cols-12 lg:gap-x-12 lg:px-8">
     <div class="lg:col-span-7">
 
-      <h2 id="cta-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Siap mulai persiapan seleksi?</h2>
-      <p class="mt-5 text-base leading-[1.65]">Konsultasi awal gratis. Kami bantu memetakan target instansi, kondisi akademik, dan paket yang paling sesuai.</p>
-      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <h2 id="cta-title" data-anim="words" class="font-display text-5xl leading-[1.0] lg:text-7xl">Siap mulai persiapan seleksi?</h2>
+      <p data-anim="fade" data-delay="250" class="mt-5 text-base leading-[1.65]">Konsultasi awal gratis. Kami bantu memetakan target instansi, kondisi akademik, dan paket yang paling sesuai.</p>
+      <div data-anim="fade" data-delay="400" class="mt-8 flex flex-col gap-3 sm:flex-row">
         <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
         <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary">Konsultasi via WhatsApp</a>
         <a href="#program" class="btn-outline">Lihat Program</a>
       </div>
         </div>
     <div class="order-first w-48 sm:w-64 lg:order-none lg:col-span-5 lg:w-full">
-      <img src="/assets/img/flag.webp" alt="" aria-hidden="true" width="1400" height="781" loading="lazy" class="h-auto w-full mix-blend-multiply">
+      <img src="/assets/img/flag.webp" alt="" aria-hidden="true" width="1400" height="781" loading="lazy" data-parallax="0.08" data-parallax-max="28" class="h-auto w-full mix-blend-multiply">
     </div>
   </div>
 </section>
@@ -601,7 +601,7 @@
   </div>
 </footer>
 <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
-<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" aria-label="Chat WhatsApp untuk konsultasi" class="fixed bottom-5 right-5 z-40 isolate flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1eb857] focus-visible:ring-white">
+<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" aria-label="Chat WhatsApp untuk konsultasi" data-wa-float class="fixed bottom-5 right-5 z-40 isolate flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1eb857] focus-visible:ring-white">
   <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 10h6M9 13h4"/></svg>
 </a>
 </body>
