@@ -108,3 +108,133 @@
     }
   }
 }
+
+/* Motion (v5) — crisp, editorial, once. Every hidden-before-animate state is
+   gated on html.js-anim (added by the inline head script / main.js only when
+   prefers-reduced-motion is not set). Plain CSS below the layers, so these
+   rules win over Tailwind utilities where needed. */
+html.js-anim {
+  --ease-reveal: cubic-bezier(.2, .7, .1, 1);
+  --ease-line: cubic-bezier(.65, 0, .35, 1);
+}
+
+/* --- Fade / soft entrance (hero copy, body paragraphs) --- */
+.js-anim [data-anim="fade"],
+.js-anim [data-anim="quote"] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .6s var(--ease-reveal) var(--d, 0ms),
+              transform .6s var(--ease-reveal) var(--d, 0ms);
+}
+.js-anim [data-anim="quote"] { transform: none; }
+.js-anim [data-anim="fade"].is-in,
+.js-anim [data-anim="quote"].is-in { opacity: 1; transform: none; }
+
+/* --- Per-word masks (h1/h2): JS splits words, sets --wi per word --- */
+.js-anim [data-anim="words"] .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: .08em;
+  margin-bottom: -.08em;
+}
+.js-anim [data-anim="words"] .word-i {
+  display: inline-block;
+  transform: translateY(105%);
+  transition: transform var(--wd, .75s) var(--ease-reveal)
+              calc(var(--wi, 0) * var(--ws, 50ms) + var(--d, 0ms));
+}
+.js-anim [data-anim="words"].is-in .word-i { transform: translateY(0); }
+
+/* --- Hairline rules drawing left→right --- */
+.js-anim [data-anim="rule"] {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .9s var(--ease-line) var(--d, 0ms);
+}
+.js-anim [data-anim="rule"].is-in { transform: scaleX(1); }
+
+/* --- Staggered groups: JS sets --i on direct children --- */
+.js-anim [data-anim="rows"] > *,
+.js-anim [data-anim="roster"] > *,
+.js-anim [data-anim="dossier"] > *,
+.js-anim [data-anim="stagger"] > *,
+.js-anim [data-anim="ladder"] > li {
+  opacity: 0;
+  transition: opacity .6s var(--ease-reveal) calc(var(--i, 0) * var(--step, 70ms) + var(--d, 0ms)),
+              transform .6s var(--ease-reveal) calc(var(--i, 0) * var(--step, 70ms) + var(--d, 0ms)),
+              clip-path .8s var(--ease-reveal) calc(var(--i, 0) * var(--step, 70ms) + var(--d, 0ms));
+}
+.js-anim [data-anim="rows"] > * { transform: translateX(-24px); }
+.js-anim [data-anim="roster"] > * { transform: scale(.96); }
+.js-anim [data-anim="dossier"] > *,
+.js-anim [data-anim="stagger"] > *,
+.js-anim [data-anim="ladder"] > li { transform: translateY(10px); }
+.js-anim [data-anim="rows"].is-in > *,
+.js-anim [data-anim="roster"].is-in > *,
+.js-anim [data-anim="dossier"].is-in > *,
+.js-anim [data-anim="stagger"].is-in > *,
+.js-anim [data-anim="ladder"].is-in > li { opacity: 1; transform: none; }
+.js-anim [data-anim="roster"] { --step: 50ms; }
+.js-anim [data-anim="rows"] { --step: 80ms; }
+.js-anim [data-anim="ladder"] { --step: 60ms; }
+
+/* --- Tahapan ladder: line draws with scroll (JS sets --lp on .ladder-line),
+   step numbers turn merah when the line reaches them (.is-reached on li) --- */
+.js-anim [data-anim="ladder"] { position: relative; }
+.js-anim .ladder-line {
+  transform: scaleY(var(--lp, 0));
+  transform-origin: top center;
+}
+.js-anim [data-anim="ladder"] .ladder-num {
+  transition: color .3s var(--ease-reveal);
+}
+.js-anim [data-anim="ladder"] li.is-reached .ladder-num { color: theme('colors.merah'); }
+
+/* --- Clip reveals: pricing unit wipes down, testimonial portrait wipes up --- */
+.js-anim [data-anim="unit"] {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path .8s var(--ease-reveal) var(--d, 0ms);
+}
+.js-anim [data-anim="unit"].is-in { clip-path: inset(0); }
+.js-anim [data-anim="clip"] {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path .9s var(--ease-reveal) var(--d, 0ms);
+}
+.js-anim [data-anim="clip"] img {
+  transform: scale(1.1);
+  transition: transform .9s var(--ease-reveal) var(--d, 0ms);
+}
+.js-anim [data-anim="clip"].is-in { clip-path: inset(0); }
+.js-anim [data-anim="clip"].is-in img { transform: scale(1); }
+
+/* --- Guarantee stamp: one-time ink press. Keep --stamp-rot = v4 resting rotation --- */
+.js-anim [data-anim="stamp"] { opacity: 0; }
+@keyframes stamp-press {
+  0%   { opacity: 0; transform: rotate(var(--stamp-rot, -8deg)) scale(1.6); }
+  70%  { opacity: 1; transform: rotate(var(--stamp-rot, -8deg)) scale(.97); }
+  100% { opacity: 1; transform: rotate(var(--stamp-rot, -8deg)) scale(1); }
+}
+.js-anim [data-anim="stamp"].is-in {
+  animation: stamp-press .38s cubic-bezier(.2, .9, .2, 1) both;
+}
+
+/* --- Subtle parallax (JS sets --py; --ps optional static safety scale) --- */
+.js-anim [data-parallax] {
+  transform: translate3d(0, var(--py, 0px), 0) scale(var(--ps, 1));
+  will-change: transform;
+}
+
+/* --- WhatsApp float: hidden until scrolled past 40% of the hero --- */
+.js-anim [data-wa-float] {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity .4s var(--ease-reveal), transform .4s var(--ease-reveal), visibility 0s linear .4s;
+}
+.js-anim [data-wa-float].is-shown {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
