@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="preload" as="image" href="/assets/hero-poster.webp">
+  <link rel="preload" as="image" href="/assets/header-poster.webp">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Taruna Prima","alternateName":"Bimbel Taruna","url":"https://bimbel-taruna.vercel.app","logo":"https://bimbel-taruna.vercel.app/favicon.svg","description":"Bimbingan persiapan seleksi Akmil, Akpol, AAL, AAU, Bintara, dan Sekolah Kedinasan.","email":"halo@tarunaprima.example","address":{"@type":"PostalAddress","addressCountry":"ID"}}</script>
   <script src="/assets/js/main.js" defer></script>
 </head>
@@ -71,10 +71,10 @@
 </header>
 <main id="main">
 <section class="relative flex min-h-screen items-center overflow-hidden bg-navy-900 pb-20 pt-32 lg:pt-36" aria-labelledby="hero-title">
-  <img src="/assets/hero-poster.webp" alt="" width="1280" height="720" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover object-center" aria-hidden="true">
-  <video class="absolute inset-0 h-full w-full object-cover object-center motion-reduce:hidden" autoplay muted loop playsinline preload="metadata" poster="/assets/hero-poster.webp" aria-hidden="true" data-hero-video>
-    <source src="/assets/hero.webm" type="video/webm">
-    <source src="/assets/hero.mp4" type="video/mp4">
+  <img src="/assets/header-poster.webp" alt="" width="1280" height="720" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover object-center" aria-hidden="true">
+  <video class="absolute inset-0 h-full w-full object-cover object-center motion-reduce:hidden" autoplay muted loop playsinline preload="metadata" poster="/assets/header-poster.webp" aria-hidden="true" data-hero-video>
+    <source src="/assets/header.webm" type="video/webm">
+    <source src="/assets/header.mp4" type="video/mp4">
   </video>
   <div class="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/75 to-navy-900/35"></div>
   <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-navy-900/40"></div>
@@ -129,8 +129,8 @@
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto mb-14 max-w-2xl reveal lg:mb-20"><p class="section-eyebrow">Program</p><h2 id="program-title" class="mt-4 text-3xl font-bold sm:text-5xl">Program per Instansi</h2><p class="mt-5 text-base leading-relaxed text-slate-600">Materi disesuaikan dengan karakter seleksi tiap instansi. Pilih target Anda, kami bantu rencanakan.</p></div>
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-        <article class="card card-lift reveal flex flex-col">
-          <img src="/assets/logos/akmil.webp" alt="Logo Akmil" width="64" height="64" loading="lazy" class="h-16 w-16 object-contain">
+        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-akmil.webp" alt="Taruna Akmil berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
+          <img src="/assets/logos/akmil.webp" alt="Logo Akmil" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200">
           <h3 class="mt-6 text-2xl font-bold">Akmil</h3>
           <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">Akademi Militer — TNI AD</p>
           <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi pendidikan perwira TNI Angkatan Darat melalui akademi militer.</p>
@@ -138,8 +138,8 @@
           <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tes akademik & TPA</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Psikotes kepribadian</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Samapta & renang</li></ul>
           <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
         </article>
-        <article class="card card-lift reveal flex flex-col">
-          <img src="/assets/logos/akpol.webp" alt="Logo Akpol" width="64" height="64" loading="lazy" class="h-16 w-16 object-contain">
+        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-akpol.webp" alt="Taruna Akpol berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
+          <img src="/assets/logos/akpol.webp" alt="Logo Akpol" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200">
           <h3 class="mt-6 text-2xl font-bold">Akpol</h3>
           <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">Akademi Kepolisian</p>
           <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi Akademi Kepolisian dengan fokus pada kesiapan fisik dan mental.</p>
@@ -147,8 +147,8 @@
           <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Wawasan kebangsaan</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tes akademik</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Wawancara & mental</li></ul>
           <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
         </article>
-        <article class="card card-lift reveal flex flex-col">
-          <span class="flex h-16 w-16 items-center justify-center rounded-full bg-navy-50 text-gold-dark ring-1 ring-navy-100" aria-hidden="true"><svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M5 14a7 7 0 0014 0"/></svg></span>
+        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-sand lg:-mx-10 lg:-mt-10"><img src="/assets/img/flag.webp" alt="" width="1400" height="781" loading="lazy" class="h-full w-full object-contain"></div>
+          <span class="relative -mt-14 flex h-16 w-16 items-center justify-center rounded-full bg-white text-gold-dark shadow-md ring-1 ring-slate-200" aria-hidden="true"><svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M5 14a7 7 0 0014 0"/></svg></span>
           <h3 class="mt-6 text-2xl font-bold">AAL</h3>
           <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">Akademi Angkatan Laut</p>
           <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi Akademi Angkatan Laut, termasuk kesiapan renang dan kesehatan.</p>
@@ -156,8 +156,8 @@
           <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Renang & samapta</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Matematika & B. Inggris</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Pemeriksaan kesehatan</li></ul>
           <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
         </article>
-        <article class="card card-lift reveal flex flex-col">
-          <img src="/assets/logos/aau.webp" alt="Logo AAU" width="64" height="64" loading="lazy" class="h-16 w-16 object-contain">
+        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-aau.webp" alt="Taruna AAU berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
+          <img src="/assets/logos/aau.webp" alt="Logo AAU" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200">
           <h3 class="mt-6 text-2xl font-bold">AAU</h3>
           <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">Akademi Angkatan Udara</p>
           <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi Akademi Angkatan Udara dengan latihan psikotes dan akademik.</p>
@@ -165,8 +165,8 @@
           <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Psikotes kecerdasan</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>TPA & numerik</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Kesiapan rikkes</li></ul>
           <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
         </article>
-        <article class="card card-lift reveal flex flex-col">
-          <div class="flex items-center -space-x-3" aria-hidden="true"><img src="/assets/logos/bintara-tni.webp" alt="" width="64" height="64" loading="lazy" class="h-16 w-16 object-contain"><img src="/assets/logos/tamtama.webp" alt="" width="64" height="64" loading="lazy" class="h-16 w-16 object-contain"></div>
+        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-bintara.webp" alt="Peserta Bintara berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
+          <div class="flex items-center -space-x-3" aria-hidden="true"><img src="/assets/logos/bintara-tni.webp" alt="" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200"><img src="/assets/logos/tamtama.webp" alt="" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200"></div>
           <h3 class="mt-6 text-2xl font-bold">Bintara & Tamtama</h3>
           <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">TNI / Polri</p>
           <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi Bintara dan Tamtama dengan jalur yang lebih ringkas dan terstruktur.</p>
@@ -174,8 +174,8 @@
           <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Samapta terarah</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tes pengetahuan umum</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Wawancara dasar</li></ul>
           <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
         </article>
-        <article class="card card-lift reveal flex flex-col">
-          <img src="/assets/logos/sekolah-kedinasan.webp" alt="Logo Sekolah Kedinasan" width="64" height="64" loading="lazy" class="h-16 w-16 object-contain">
+        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-kedinasan.webp" alt="Peserta Sekolah Kedinasan berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
+          <img src="/assets/logos/sekolah-kedinasan.webp" alt="Logo Sekolah Kedinasan" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200">
           <h3 class="mt-6 text-2xl font-bold">Sekolah Kedinasan</h3>
           <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">IPDN, PKN STAN, STIS, STIN, dll.</p>
           <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi sekolah kedinasan dengan fokus akademik dan tes kemampuan.</p>
@@ -208,7 +208,7 @@
 
 <section id="tahapan" class="bg-white py-24 lg:py-32" aria-labelledby="tahapan-title">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto mb-14 max-w-2xl reveal lg:mb-20"><p class="section-eyebrow">Tahapan</p><h2 id="tahapan-title" class="mt-4 text-3xl font-bold sm:text-5xl">Tahapan Seleksi</h2><p class="mt-5 text-base leading-relaxed text-slate-600">Tujuh tahap umum seleksi. Kami melatih setiap tahap sesuai urutannya.</p></div>
+    <div class="mb-14 md:flex md:items-end md:justify-between md:gap-12 lg:mb-20"><div class="max-w-2xl reveal"><p class="section-eyebrow">Tahapan</p><h2 id="tahapan-title" class="mt-4 text-3xl font-bold sm:text-5xl">Tahapan Seleksi</h2><p class="mt-5 text-base leading-relaxed text-slate-600">Tujuh tahap umum seleksi. Kami melatih setiap tahap sesuai urutannya.</p></div><img src="/assets/img/roadmap-model.webp" alt="Taruna berseragam menunjuk tahapan seleksi" width="894" height="1200" loading="lazy" class="hidden max-h-[420px] w-auto object-contain md:block"></div>
     <ol class="relative space-y-0 border-l-2 border-gold/40 pl-0 md:flex md:space-y-0 md:border-l-0 md:border-t-2 md:pl-0">
           <li class="reveal relative flex gap-6 md:flex-1 md:flex-col md:items-center md:gap-5 md:text-center">
             <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-white font-display text-lg font-semibold text-navy-900">1</div>
@@ -322,16 +322,16 @@
     <div class="mx-auto mb-14 max-w-2xl reveal lg:mb-20"><p class="section-eyebrow">Testimoni</p><h2 id="testi-title" class="mt-4 text-3xl font-bold sm:text-5xl">Cerita Taruna Kami</h2>
       <span class="mt-6 inline-block rounded-md border border-gold/50 bg-gold/10 px-3 py-1.5 text-xs font-semibold text-gold-deep">Testimoni contoh — akan diganti testimoni asli dengan izin</span></div>
     <div class="grid gap-8 md:grid-cols-3 lg:gap-10">
-        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><span class="flex h-12 w-12 items-center justify-center rounded-full bg-navy-900 font-display text-lg font-semibold text-gold-light" aria-hidden="true">RA</span><figcaption><p class="font-bold text-navy-900">Rizky A. (contoh)</p><p class="text-xs text-gold-deep">Lolos Akpol 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Latihan wawancara dan simulasi psikotes benar-benar membantu saya tetap tenang di hari seleksi.”</blockquote></figure>
-        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><span class="flex h-12 w-12 items-center justify-center rounded-full bg-navy-900 font-display text-lg font-semibold text-gold-light" aria-hidden="true">SM</span><figcaption><p class="font-bold text-navy-900">Sinta M. (contoh)</p><p class="text-xs text-gold-deep">Lolos Bintara Polri 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Coaching samapta yang bertahap membuat fisik saya siap tanpa cedera. Laporan progresnya juga jelas.”</blockquote></figure>
-        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><span class="flex h-12 w-12 items-center justify-center rounded-full bg-navy-900 font-display text-lg font-semibold text-gold-light" aria-hidden="true">DP</span><figcaption><p class="font-bold text-navy-900">Dimas P. (contoh)</p><p class="text-xs text-gold-deep">Lolos SIPSS 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Tryout mingguannya seperti tes asli. Pembahasannya rinci sehingga saya tahu di mana harus memperbaiki.”</blockquote></figure>
+        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><img src="/assets/img/testi-t1.webp" alt="" width="400" height="400" loading="lazy" class="h-16 w-16 rounded-full object-cover object-top ring-2 ring-gold/40"><figcaption><p class="font-bold text-navy-900">Rizky A. (contoh)</p><p class="text-xs text-gold-deep">Lolos Bintara TNI 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Latihan wawancara dan simulasi psikotes benar-benar membantu saya tetap tenang di hari seleksi.”</blockquote></figure>
+        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><img src="/assets/img/testi-t2.webp" alt="" width="400" height="400" loading="lazy" class="h-16 w-16 rounded-full object-cover object-top ring-2 ring-gold/40"><figcaption><p class="font-bold text-navy-900">Sinta M. (contoh)</p><p class="text-xs text-gold-deep">Lolos Bintara Polri 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Coaching samapta yang bertahap membuat fisik saya siap tanpa cedera. Laporan progresnya juga jelas.”</blockquote></figure>
+        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><img src="/assets/img/testi-t3.webp" alt="" width="400" height="400" loading="lazy" class="h-16 w-16 rounded-full object-cover object-top ring-2 ring-gold/40"><figcaption><p class="font-bold text-navy-900">Dimas P. (contoh)</p><p class="text-xs text-gold-deep">Lolos Sekolah Kedinasan 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Tryout mingguannya seperti tes asli. Pembahasannya rinci sehingga saya tahu di mana harus memperbaiki.”</blockquote></figure>
     </div>
   </div>
 </section>
 
 <section id="faq" class="bg-white py-24 lg:py-32" aria-labelledby="faq-title">
   <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:gap-20 lg:px-8">
-    <div class="reveal"><p class="section-eyebrow">FAQ</p><h2 id="faq-title" class="mt-4 text-3xl font-bold sm:text-5xl">Pertanyaan Umum</h2><p class="mt-5 text-base leading-relaxed text-slate-600">Belum menemukan jawaban? Hubungi kami langsung lewat WhatsApp.</p></div>
+    <div class="reveal lg:sticky lg:top-28 lg:self-start"><p class="section-eyebrow">FAQ</p><h2 id="faq-title" class="mt-4 text-3xl font-bold sm:text-5xl">Pertanyaan Umum</h2><p class="mt-5 text-base leading-relaxed text-slate-600">Belum menemukan jawaban? Hubungi kami langsung lewat WhatsApp.</p><img src="/assets/img/faq-model.webp" alt="Mentor berseragam menunjuk ke daftar pertanyaan" width="713" height="1200" loading="lazy" class="mt-10 hidden w-full max-w-xs lg:block"></div>
     <div class="reveal lg:col-span-2">
         <details class="faq-item group border-b border-slate-200 py-6" open><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Apakah ada kelas online untuk luar kota?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Ya. Paket Online Class dapat diikuti dari mana saja melalui Zoom, dengan rekaman kelas dan grup mentoring.</p></details>
         <details class="faq-item group border-b border-slate-200 py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Berapa usia dan tinggi badan minimal?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Persyaratan berbeda per instansi dan per tahun. Selalu cek sumber resmi panitia penerimaan. Kami bantu mengecek di sesi konsultasi.</p></details>
@@ -346,6 +346,7 @@
 
 <section id="cta" class="relative overflow-hidden bg-navy-50 py-24 lg:py-32" aria-labelledby="cta-title">
   <div class="bg-pattern pointer-events-none absolute inset-0 opacity-60"></div>
+  <img src="/assets/img/flag.webp" alt="" aria-hidden="true" width="1400" height="781" loading="lazy" class="pointer-events-none absolute -right-24 bottom-0 w-[520px] max-w-none opacity-25 mix-blend-multiply sm:opacity-30 lg:-right-10 lg:w-[640px]">
   <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 reveal">
     <h2 id="cta-title" class="text-3xl font-bold text-navy-900 sm:text-5xl">Siap Mulai Persiapan Seleksi?</h2>
     <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">Konsultasi awal gratis. Kami bantu memetakan target instansi, kondisi akademik, dan paket yang paling sesuai.</p>
