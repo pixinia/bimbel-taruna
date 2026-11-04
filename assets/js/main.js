@@ -128,6 +128,8 @@
   function runCount(el) {
     var spec = counterSpec(el);
     if (!spec) return;
+    // Lock the width to the final value so neighbours never shift while ticking.
+    el.style.minWidth = el.getBoundingClientRect().width + 'px';
     var t0 = null, dur = 1200;
     requestAnimationFrame(function frame(t) {
       if (t0 === null) t0 = t;
@@ -145,12 +147,23 @@
     var io = new IntersectionObserver(function (entries) {
       each(entries, function (en) {
         if (!en.isIntersecting) return;
-        en.target.classList.add('is-in');
-        if (en.target.hasAttribute('data-count')) runCount(en.target);
+        // Clip-path targets are observed through their parent (a fully clipped
+        // element never reports as intersecting).
+        var t = en.target.__animChild || en.target;
+        t.classList.add('is-in');
+        if (t.hasAttribute('data-count')) runCount(t);
         io.unobserve(en.target);
       });
     }, { threshold: 0.01, rootMargin: '0px 0px -10% 0px' });
-    each(revealTargets, function (el) { io.observe(el); });
+    each(revealTargets, function (el) {
+      var a = el.getAttribute('data-anim');
+      if ((a === 'unit' || a === 'clip') && el.parentElement) {
+        el.parentElement.__animChild = el;
+        io.observe(el.parentElement);
+      } else {
+        io.observe(el);
+      }
+    });
   } else {
     each(revealTargets, function (el) { el.classList.add('is-in'); });
   }
@@ -172,7 +185,7 @@
   var ladderLine = ladder ? ladder.querySelector('.ladder-line') : null;
   var ladderItems = ladder ? ladder.querySelectorAll('li') : [];
   var waFloat = document.querySelector('[data-wa-float]');
-  var heroSection = document.querySelector('main section');
+  var heroSection = document.querySelector('[data-hero-video]') ? document.querySelector('main section') : null;
   var waShown = false;
 
   function frameScroll() {
@@ -193,7 +206,7 @@
         if (li.getBoundingClientRect().top < vh * 0.72) li.classList.add('is-reached');
       });
     }
-    if (waFloat && !waShown && window.scrollY > (heroSection ? heroSection.offsetHeight * 0.4 : 240)) {
+    if (waFloat && !waShown && (!heroSection || window.scrollY > heroSection.offsetHeight * 0.4)) {
       waShown = true;
       waFloat.classList.add('is-shown');
     }
