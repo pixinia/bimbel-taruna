@@ -11,6 +11,8 @@
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
       mobileMenu.classList.toggle('hidden', !open);
+      var hdr = document.getElementById('site-header');
+      if (hdr) hdr.classList.toggle('is-scrolled', open || window.scrollY > 24);
     };
     toggle.addEventListener('click', function () {
       setOpen(toggle.getAttribute('aria-expanded') !== 'true');
@@ -27,7 +29,7 @@
   var header = document.getElementById('site-header');
   if (header) {
     var onScroll = function () {
-      header.classList.toggle('is-scrolled', window.scrollY > 24);
+      header.classList.toggle('is-scrolled', window.scrollY > 24 || (toggle && toggle.getAttribute('aria-expanded') === 'true'));
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
