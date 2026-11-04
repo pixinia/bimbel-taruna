@@ -8,6 +8,13 @@ module.exports = {
           900: '#0B1426',
           800: '#111D35',
           700: '#1A2A4A',
+          100: '#DCE4F0',
+          50: '#EEF2F8',
+        },
+        sand: {
+          DEFAULT: '#F7F5F0',
+          100: '#F7F5F0',
+          200: '#EFEBE2',
         },
         olive: {
           DEFAULT: '#4B5320',
@@ -21,6 +28,7 @@ module.exports = {
           DEFAULT: '#C9A227',
           light: '#E3C35A',
           dark: '#A6851C',
+          deep: '#8A6D12',
         },
       },
       fontFamily: {

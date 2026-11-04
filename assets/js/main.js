@@ -82,6 +82,18 @@
     counters.forEach(function (el) { cio.observe(el); });
   }
 
+  // Hero video: respect reduced motion, otherwise start playback (mobile-safe)
+  var heroVideo = document.querySelector('[data-hero-video]');
+  if (heroVideo) {
+    if (reduceMotion) {
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.pause();
+    } else {
+      var playing = heroVideo.play();
+      if (playing && playing.catch) playing.catch(function () {});
+    }
+  }
+
   // Footer year
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

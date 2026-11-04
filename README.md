@@ -33,7 +33,12 @@ vercel.json         Konfigurasi deploy Vercel (cleanUrls, trailingSlash, cache /
 assets/
   css/style.css     Hasil build Tailwind (WAJIB di-commit)
   js/main.js        Menu mobile, header sticky, reveal animasi, counter, tahun footer
-  hero.webp         Gambar hero (dibuat AI, tanpa logo resmi)
+  hero.webm         Video latar hero (sumber utama, WebM)
+  hero.mp4          Video latar hero (fallback, MP4)
+  hero-poster.webp  Poster hero (ditampilkan sebelum video main, atau jika video gagal/reduced motion)
+  hero-poster.jpg   Poster hero versi JPG
+  hero.webp         Gambar hero lama (tidak lagi direferensikan; disimpan sebagai cadangan)
+  logos/*.webp      Logo ilustrasi instansi (320x320, transparan) — lihat catatan di bawah
   og-image.jpg      Gambar Open Graph (1200x630)
 src/input.css       Sumber Tailwind (@tailwind + komponen kustom @layer)
 tailwind.config.js  Tema warna (navy, olive, gold) dan font (Oswald, Inter)
@@ -77,6 +82,9 @@ Buka `http://localhost:8000`. Catatan: dengan server statis biasa, URL seperti `
 
 ## Catatan
 
-- Gambar hero dibuat dengan AI. Tidak ada logo, lambang, atau insignia resmi TNI/Polri/Akmil/Akpol/AAL/AAU di seluruh mockup.
+- Video dan poster hero dibuat dengan AI. Tidak ada lambang atau insignia resmi TNI/Polri/Akmil/Akpol/AAL/AAU di video maupun poster.
+- **Logo di `assets/logos/` adalah logo ilustrasi/stylized, bukan file resmi.** Sebelum produksi, wajib memperoleh izin atau aset resmi dari masing-tiap instansi (TNI AD/AL/AU, Polri, dan lembaga kedinasan terkait). AAL belum memiliki file logo dan saat ini ditampilkan sebagai lencana teks/ikon.
+- Tema terang (white/sand) dengan aksen navy, emas, dan olive. Hero, kartu harga unggulan, dan footer tetap gelap.
+- Video hero diputar otomatis dan senyap. Jika `prefers-reduced-motion` aktif, video dihentikan dan poster statis yang ditampilkan.
 - Font Oswald dan Inter dimuat dari Google Fonts.
 - Animasi menghormati `prefers-reduced-motion`.
