@@ -23,24 +23,24 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="preload" as="image" href="/assets/header-poster.webp">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Taruna Prima","alternateName":"Bimbel Taruna","url":"https://bimbel-taruna.vercel.app","logo":"https://bimbel-taruna.vercel.app/favicon.svg","description":"Bimbingan persiapan seleksi Akmil, Akpol, AAL, AAU, Bintara, dan Sekolah Kedinasan.","email":"halo@tarunaprima.example","address":{"@type":"PostalAddress","addressCountry":"ID"}}</script>
   <script src="/assets/js/main.js" defer></script>
 </head>
-<body class="overflow-x-hidden bg-white font-sans text-slate-600">
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-gold focus:px-4 focus:py-2 focus:text-navy-900">Lewati ke konten</a>
+<body class="overflow-x-hidden bg-kertas font-sans text-tinta-2">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-merah focus:px-4 focus:py-2 focus:text-white">Lewati ke konten</a>
 <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition duration-300">
-  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-    <a href="/" class="flex items-center gap-3" aria-label="Taruna Prima — Beranda">
-      <img src="/favicon.svg" alt="" width="40" height="40" class="h-10 w-10">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8">
+    <a href="/" class="flex items-center gap-3" aria-label="Taruna Prima, beranda">
+      <svg viewBox="0 0 64 64" aria-hidden="true" class="brand-mark h-9 w-9 shrink-0 text-white"><path d="M32 10 L50 17 V31 C50 43 42 51 32 55 C22 51 14 43 14 31 V17 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M32 22 L38 34 H26 Z" fill="currentColor"/><path d="M22 40 L32 46 L42 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span class="flex flex-col leading-none">
-        <span class="brand-name font-display text-lg font-semibold uppercase tracking-[0.2em]">TARUNA PRIMA</span>
-        <span class="brand-sub mt-1 text-[10px] uppercase tracking-[0.3em]">Bimbel Taruna</span>
+        <span class="brand-name font-display text-2xl font-extrabold tracking-tight">Taruna Prima</span>
+        <span class="brand-sub mt-1 text-xs font-medium">Bimbel taruna</span>
       </span>
     </a>
-    <nav aria-label="Navigasi utama" class="hidden items-center gap-6 xl:flex">
+    <nav aria-label="Navigasi utama" class="hidden items-center gap-7 xl:flex">
           <a href="/" class="nav-link" aria-current="page">Beranda</a>
           <a href="/program" class="nav-link">Program</a>
           <a href="/tryout" class="nav-link">Tryout</a>
@@ -51,364 +51,557 @@
       <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
       <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20gratis.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary !px-4 !py-2 text-sm" data-wa-header>Konsultasi Gratis</a>
     </nav>
-    <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu" class="menu-btn inline-flex h-11 w-11 items-center justify-center rounded-md border xl:hidden">
+    <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu" class="menu-btn inline-flex h-11 w-11 items-center justify-center rounded-sm border xl:hidden">
       <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
-  <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white shadow-lg xl:hidden">
-    <nav aria-label="Navigasi mobile" class="flex flex-col px-4 pb-6 pt-2">
-        <a href="/" class="block border-b border-slate-200 py-3 text-base font-medium text-navy-900 hover:text-gold-dark" aria-current="page">Beranda</a>
-        <a href="/program" class="block border-b border-slate-200 py-3 text-base font-medium text-navy-900 hover:text-gold-dark">Program</a>
-        <a href="/tryout" class="block border-b border-slate-200 py-3 text-base font-medium text-navy-900 hover:text-gold-dark">Tryout</a>
-        <a href="/alumni" class="block border-b border-slate-200 py-3 text-base font-medium text-navy-900 hover:text-gold-dark">Alumni</a>
-        <a href="/blog" class="block border-b border-slate-200 py-3 text-base font-medium text-navy-900 hover:text-gold-dark">Blog</a>
-        <a href="/tentang" class="block border-b border-slate-200 py-3 text-base font-medium text-navy-900 hover:text-gold-dark">Tentang</a>
-        <a href="/kontak" class="block border-b border-slate-200 py-3 text-base font-medium text-navy-900 hover:text-gold-dark">Kontak</a>
+  <div id="mobile-menu" class="hidden border-t border-garis bg-white xl:hidden">
+    <nav aria-label="Navigasi mobile" class="flex flex-col px-5 pb-6 pt-2">
+        <a href="/" class="block border-b border-garis py-3.5 text-base font-medium text-tinta hover:text-merah" aria-current="page">Beranda</a>
+        <a href="/program" class="block border-b border-garis py-3.5 text-base font-medium text-tinta hover:text-merah">Program</a>
+        <a href="/tryout" class="block border-b border-garis py-3.5 text-base font-medium text-tinta hover:text-merah">Tryout</a>
+        <a href="/alumni" class="block border-b border-garis py-3.5 text-base font-medium text-tinta hover:text-merah">Alumni</a>
+        <a href="/blog" class="block border-b border-garis py-3.5 text-base font-medium text-tinta hover:text-merah">Blog</a>
+        <a href="/tentang" class="block border-b border-garis py-3.5 text-base font-medium text-tinta hover:text-merah">Tentang</a>
+        <a href="/kontak" class="block border-b border-garis py-3.5 text-base font-medium text-tinta hover:text-merah">Kontak</a>
       <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
-      <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20gratis.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary mt-5">Konsultasi Gratis</a>
+      <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20gratis.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary mt-5 self-start">Konsultasi Gratis</a>
     </nav>
   </div>
 </header>
 <main id="main">
-<section class="relative flex min-h-screen items-center overflow-hidden bg-navy-900 pb-20 pt-32 lg:pt-36" aria-labelledby="hero-title">
+<section class="relative flex min-h-[100svh] flex-col overflow-hidden bg-tinta" aria-labelledby="hero-title">
   <img src="/assets/header-poster.webp" alt="" width="1280" height="720" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover object-center" aria-hidden="true">
   <video class="absolute inset-0 h-full w-full object-cover object-center motion-reduce:hidden" autoplay muted loop playsinline preload="metadata" poster="/assets/header-poster.webp" aria-hidden="true" data-hero-video>
     <source src="/assets/header.webm" type="video/webm">
     <source src="/assets/header.mp4" type="video/mp4">
   </video>
-  <div class="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/75 to-navy-900/35"></div>
-  <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-navy-900/40"></div>
-  <div class="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <span class="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-navy-900/60 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold-light backdrop-blur">Bimbel Persiapan Akmil · Akpol · AAL · AAU · Bintara</span>
-      <h1 id="hero-title" class="mt-6 text-4xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl">Langkah Pertama Menuju <span class="text-gold">Seragam Impian</span></h1>
-      <p class="mt-6 max-w-xl text-base leading-relaxed text-slate-200 sm:text-lg">Persiapan terarah untuk seleksi Akademi TNI, Akpol, Bintara/Tamtama &amp; Sekolah Kedinasan — akademik, psikotes, samapta, kesehatan, hingga wawancara, dibimbing mentor berpengalaman dengan harga transparan.</p>
-      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-        <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
-        <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary">Konsultasi via WhatsApp <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="#program" class="btn-outline-light">Lihat Program</a>
+  <div class="absolute inset-0 bg-tinta/55" aria-hidden="true"></div>
+  <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-tinta/85 via-tinta/40 to-transparent" aria-hidden="true"></div>
+  <div class="relative mx-auto flex w-full max-w-7xl flex-1 flex-col px-5 pb-6 pt-24 sm:px-6 lg:px-8">
+    <div class="mt-auto">
+      <h1 id="hero-title" class="font-display text-[3.5rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-[7rem] xl:text-[8rem]">Langkah pertama menuju<br class="hidden lg:block"> seragam impian</h1>
+      <div class="mt-10 grid gap-x-12 gap-y-8 lg:grid-cols-12">
+        <p class="max-w-prose text-base leading-[1.65] text-white/85 sm:text-lg lg:col-span-6">Persiapan terarah untuk seleksi Akademi TNI, Akpol, Bintara/Tamtama &amp; Sekolah Kedinasan: akademik, psikotes, samapta, kesehatan, hingga wawancara, dibimbing mentor berpengalaman dengan harga transparan.</p>
+        <div class="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:col-start-8 lg:self-end">
+          <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
+          <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary">Konsultasi via WhatsApp</a>
+          <a href="#program" class="btn-outline-light">Lihat Program</a>
+        </div>
       </div>
     </div>
-    <dl class="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-4 reveal">
-      <div class="glass p-5"><dt class="text-xs uppercase tracking-widest text-slate-300">Siswa dibimbing</dt><dd class="mt-2 font-display text-3xl font-semibold text-gold-light"><span data-count="1200" data-suffix="+">1.200+</span></dd></div>
-      <div class="glass p-5"><dt class="text-xs uppercase tracking-widest text-slate-300">Tryout CAT / tahun</dt><dd class="mt-2 font-display text-3xl font-semibold text-gold-light"><span data-count="48">48</span> <span class="text-base text-slate-200">Tryout</span></dd></div>
-      <div class="glass p-5"><dt class="text-xs uppercase tracking-widest text-slate-300">Jalur instansi</dt><dd class="mt-2 font-display text-3xl font-semibold text-gold-light"><span data-count="6">6</span> <span class="text-base text-slate-200">Jalur</span></dd></div>
-      <div class="glass p-5"><dt class="text-xs uppercase tracking-widest text-slate-300">Rating kepuasan</dt><dd class="mt-2 font-display text-3xl font-semibold text-gold-light">4.8<span class="text-base text-slate-200">/5</span></dd></div>
-    </dl>
-    <p class="mt-3 text-xs text-slate-300">*Angka contoh untuk mockup.</p>
-  </div>
-  <a href="#marquee" aria-label="Gulir ke bawah" class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-gold-light md:block animate-bob"><svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
-</section>
-
-<section id="marquee" aria-label="Instansi target" class="marquee-wrap overflow-hidden border-y border-slate-200 bg-sand py-8">
-  <ul class="marquee-track motion-reduce:flex motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:gap-x-14 motion-reduce:gap-y-8" aria-label="AKMIL, AKPOL, AAL, AAU, Bintara TNI, Bintara Polri, Tamtama, SIPSS, Sekolah Kedinasan, UNHAN">
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/akmil.webp" alt="Logo Akmil" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">AKMIL</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/akpol.webp" alt="Logo Akpol" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">AKPOL</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><span aria-hidden="true" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-navy-900 bg-white text-gold-dark sm:h-14 sm:w-14"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M5 14a7 7 0 0014 0"/></svg></span>AAL</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/aau.webp" alt="Logo AAU" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">AAU</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/bintara-tni.webp" alt="Logo Bintara TNI" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">BINTARA TNI</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/bintara-polri.webp" alt="Logo Bintara Polri" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">BINTARA POLRI</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/tamtama.webp" alt="Logo Tamtama" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">TAMTAMA</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/sipss.webp" alt="Logo SIPSS" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">SIPSS</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/sekolah-kedinasan.webp" alt="Logo Sekolah Kedinasan" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">SEKOLAH KEDINASAN</li>
-          <li class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:pr-0 sm:text-xl"><img src="/assets/logos/unhan.webp" alt="Logo Unhan" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">UNHAN</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/akmil.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">AKMIL</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/akpol.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">AKPOL</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-navy-900 bg-white text-gold-dark sm:h-14 sm:w-14"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M5 14a7 7 0 0014 0"/></svg></span>AAL</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/aau.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">AAU</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/bintara-tni.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">BINTARA TNI</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/bintara-polri.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">BINTARA POLRI</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/tamtama.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">TAMTAMA</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/sipss.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">SIPSS</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/sekolah-kedinasan.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">SEKOLAH KEDINASAN</li>
-          <li aria-hidden="true" class="flex shrink-0 items-center gap-4 whitespace-nowrap pr-14 font-display text-lg uppercase tracking-wide text-navy-900 motion-reduce:hidden sm:text-xl"><img src="/assets/logos/unhan.webp" alt="" width="56" height="56" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">UNHAN</li>
-  </ul>
-</section>
-
-<section id="program" class="bg-white py-24 lg:py-32" aria-labelledby="program-title">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto mb-14 max-w-2xl reveal lg:mb-20"><p class="section-eyebrow">Program</p><h2 id="program-title" class="mt-4 text-3xl font-bold sm:text-5xl">Program per Instansi</h2><p class="mt-5 text-base leading-relaxed text-slate-600">Materi disesuaikan dengan karakter seleksi tiap instansi. Pilih target Anda, kami bantu rencanakan.</p></div>
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-akmil.webp" alt="Taruna Akmil berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
-          <img src="/assets/logos/akmil.webp" alt="Logo Akmil" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200">
-          <h3 class="mt-6 text-2xl font-bold">Akmil</h3>
-          <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">Akademi Militer — TNI AD</p>
-          <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi pendidikan perwira TNI Angkatan Darat melalui akademi militer.</p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-navy-900">Materi fokus</p>
-          <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tes akademik & TPA</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Psikotes kepribadian</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Samapta & renang</li></ul>
-          <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-akpol.webp" alt="Taruna Akpol berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
-          <img src="/assets/logos/akpol.webp" alt="Logo Akpol" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200">
-          <h3 class="mt-6 text-2xl font-bold">Akpol</h3>
-          <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">Akademi Kepolisian</p>
-          <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi Akademi Kepolisian dengan fokus pada kesiapan fisik dan mental.</p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-navy-900">Materi fokus</p>
-          <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Wawasan kebangsaan</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tes akademik</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Wawancara & mental</li></ul>
-          <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-sand lg:-mx-10 lg:-mt-10"><img src="/assets/img/flag.webp" alt="" width="1400" height="781" loading="lazy" class="h-full w-full object-contain"></div>
-          <span class="relative -mt-14 flex h-16 w-16 items-center justify-center rounded-full bg-white text-gold-dark shadow-md ring-1 ring-slate-200" aria-hidden="true"><svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M5 14a7 7 0 0014 0"/></svg></span>
-          <h3 class="mt-6 text-2xl font-bold">AAL</h3>
-          <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">Akademi Angkatan Laut</p>
-          <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi Akademi Angkatan Laut, termasuk kesiapan renang dan kesehatan.</p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-navy-900">Materi fokus</p>
-          <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Renang & samapta</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Matematika & B. Inggris</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Pemeriksaan kesehatan</li></ul>
-          <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-aau.webp" alt="Taruna AAU berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
-          <img src="/assets/logos/aau.webp" alt="Logo AAU" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200">
-          <h3 class="mt-6 text-2xl font-bold">AAU</h3>
-          <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">Akademi Angkatan Udara</p>
-          <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi Akademi Angkatan Udara dengan latihan psikotes dan akademik.</p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-navy-900">Materi fokus</p>
-          <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Psikotes kecerdasan</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>TPA & numerik</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Kesiapan rikkes</li></ul>
-          <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-bintara.webp" alt="Peserta Bintara berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
-          <div class="flex items-center -space-x-3" aria-hidden="true"><img src="/assets/logos/bintara-tni.webp" alt="" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200"><img src="/assets/logos/tamtama.webp" alt="" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200"></div>
-          <h3 class="mt-6 text-2xl font-bold">Bintara & Tamtama</h3>
-          <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">TNI / Polri</p>
-          <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi Bintara dan Tamtama dengan jalur yang lebih ringkas dan terstruktur.</p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-navy-900">Materi fokus</p>
-          <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Samapta terarah</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tes pengetahuan umum</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Wawancara dasar</li></ul>
-          <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card card-lift reveal flex flex-col"><div class="relative -mx-8 -mt-8 mb-6 aspect-[2/1] overflow-hidden rounded-t-2xl bg-navy-900 lg:-mx-10 lg:-mt-10"><img src="/assets/img/prog-kedinasan.webp" alt="Peserta Sekolah Kedinasan berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top"></div>
-          <img src="/assets/logos/sekolah-kedinasan.webp" alt="Logo Sekolah Kedinasan" width="64" height="64" loading="lazy" class="relative -mt-14 h-16 w-16 rounded-full bg-white object-contain p-1 shadow-md ring-1 ring-slate-200">
-          <h3 class="mt-6 text-2xl font-bold">Sekolah Kedinasan</h3>
-          <p class="mt-2 text-xs uppercase tracking-widest text-gold-deep">IPDN, PKN STAN, STIS, STIN, dll.</p>
-          <p class="mt-4 text-sm leading-relaxed text-slate-600">Persiapan seleksi sekolah kedinasan dengan fokus akademik dan tes kemampuan.</p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-navy-900">Materi fokus</p>
-          <ul class="mt-3 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>TPA & matematika</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>B. Inggris & pengetahuan umum</li><li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Wawancara & psikotes</li></ul>
-          <a href="/program" class="mt-auto pt-8 text-sm font-semibold text-gold-deep hover:text-navy-900">Selengkapnya <span aria-hidden="true">→</span></a>
-        </article>
+    <div class="mt-10 border-t border-white/25 pt-5">
+      <dl class="grid grid-cols-2 gap-x-10 gap-y-5 sm:flex sm:flex-wrap sm:gap-x-10 sm:gap-y-4">
+        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd class="tnum font-display text-2xl font-bold text-white sm:text-3xl">1.200+</dd><dt class="text-sm text-white/70">siswa dibimbing</dt></div>
+        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd class="tnum font-display text-2xl font-bold text-white sm:text-3xl">48</dd><dt class="text-sm text-white/70">tryout CAT per tahun</dt></div>
+        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd class="tnum font-display text-2xl font-bold text-white sm:text-3xl">6</dd><dt class="text-sm text-white/70">jalur instansi</dt></div>
+        <div class="flex flex-col gap-0.5 sm:flex-row-reverse sm:items-baseline sm:gap-2"><dd class="tnum font-display text-2xl font-bold text-white sm:text-3xl">4.8/5</dd><dt class="text-sm text-white/70">rating kepuasan</dt></div>
+      </dl>
+      <p class="mt-4 text-xs text-white/70">*Angka contoh untuk mockup.</p>
     </div>
   </div>
 </section>
 
-<section id="keunggulan" class="bg-sand py-24 lg:py-32" aria-labelledby="keunggulan-title">
-  <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
-    <div class="reveal">
-      <p class="section-eyebrow">Keunggulan</p>
-      <h2 id="keunggulan-title" class="mt-4 text-3xl font-bold leading-tight sm:text-5xl">Persiapan Lengkap, <span class="text-gold-dark">Satu Atap</span></h2>
-      <p class="mt-6 max-w-prose text-base leading-8 text-slate-600">Dari akademik hingga mental, setiap aspek seleksi kami latih secara terstruktur. Orang tua juga mendapat laporan progres berkala, sehingga Anda ikut memantau perkembangan putra-putri.</p>
-      <div class="mt-8 flex flex-wrap gap-3 text-sm text-navy-900"><span class="rounded-full border border-olive/30 bg-olive/10 px-4 py-1.5">Laporan progres untuk orang tua</span><span class="rounded-full border border-olive/30 bg-olive/10 px-4 py-1.5">Mentor berpengalaman</span></div>
+<section id="marquee" aria-label="Instansi target" class="border-b border-garis bg-kertas py-16 lg:py-20">
+  <div class="mx-auto grid max-w-7xl items-center gap-8 px-5 sm:px-6 lg:grid-cols-[9rem_minmax(0,1fr)] lg:gap-12 lg:px-8">
+    <p class="max-w-[11rem] text-sm font-semibold leading-snug text-tinta">Jalur yang kami latih</p>
+    <ul class="roster border-t border-garis sm:border-t-0" aria-label="AKMIL, AKPOL, AAL, AAU, Bintara TNI, Bintara Polri, Tamtama, SIPSS, Sekolah Kedinasan, UNHAN">
+          <li><img src="/assets/logos/akmil.webp" alt="Logo Akmil" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">AKMIL</span></li>
+          <li><img src="/assets/logos/akpol.webp" alt="Logo Akpol" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">AKPOL</span></li>
+          <li><span aria-hidden="true" class="flex h-14 w-14 items-center justify-center border border-garis bg-white text-tinta"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M5 14a7 7 0 0014 0"/></svg></span><span class="text-sm font-semibold text-tinta">AAL</span></li>
+          <li><img src="/assets/logos/aau.webp" alt="Logo AAU" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">AAU</span></li>
+          <li><img src="/assets/logos/bintara-tni.webp" alt="Logo Bintara TNI" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">Bintara TNI</span></li>
+          <li><img src="/assets/logos/bintara-polri.webp" alt="Logo Bintara Polri" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">Bintara Polri</span></li>
+          <li><img src="/assets/logos/tamtama.webp" alt="Logo Tamtama" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">Tamtama</span></li>
+          <li><img src="/assets/logos/sipss.webp" alt="Logo SIPSS" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">SIPSS</span></li>
+          <li><img src="/assets/logos/sekolah-kedinasan.webp" alt="Logo Sekolah Kedinasan" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">Sekolah Kedinasan</span></li>
+          <li><img src="/assets/logos/unhan.webp" alt="Logo Unhan" width="56" height="56" loading="lazy" class="h-14 w-14 object-contain"><span class="text-sm font-semibold text-tinta">Unhan</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="program" class="bg-kertas py-24 lg:py-36" aria-labelledby="program-title">
+  <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+    <div class="grid gap-5 lg:grid-cols-12 lg:gap-x-8">
+      <h2 id="program-title" class="font-display text-5xl leading-[1.0] lg:col-span-5 lg:text-7xl">Program per instansi</h2>
+      <p class="max-w-prose self-end text-base leading-[1.65] lg:col-span-6 lg:col-start-7">Materi disesuaikan dengan karakter seleksi tiap instansi. Pilih target Anda, kami bantu rencanakan.</p>
     </div>
-    <div class="grid gap-6 sm:grid-cols-2 lg:gap-8">
-          <div class="card card-lift reveal !p-7"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-dark"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3 class="mt-5 text-lg font-bold">Tryout CAT berkala</h3><p class="mt-3 text-sm leading-relaxed text-slate-600">Simulasi seperti tes asli, lengkap dengan ranking dan pembahasan tiap soal.</p></div>
-          <div class="card card-lift reveal !p-7"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-dark"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4a3 3 0 00-3 3 3 3 0 00-2 5 3 3 0 002 5 3 3 0 003 3V4zM15 4a3 3 0 013 3 3 3 0 012 5 3 3 0 01-2 5 3 3 0 01-3 3V4z"/></svg></div><h3 class="mt-5 text-lg font-bold">Psikotes</h3><p class="mt-3 text-sm leading-relaxed text-slate-600">Latihan kecerdasan, kecermatan, dan kepribadian, termasuk pola tes gaya Kraepelin & MMPI.</p></div>
-          <div class="card card-lift reveal !p-7"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-dark"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6v12M18 6v12M3 9v6M21 9v6M6 12h12"/></svg></div><h3 class="mt-5 text-lg font-bold">Samapta & Renang</h3><p class="mt-3 text-sm leading-relaxed text-slate-600">Lari 12 menit, pull up, push up, sit up, shuttle run, dan renang — coaching bertahap.</p></div>
-          <div class="card card-lift reveal !p-7"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-dark"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></div><h3 class="mt-5 text-lg font-bold">Panduan Kesehatan</h3><p class="mt-3 text-sm leading-relaxed text-slate-600">Persiapan rikkes: tinggi/berat badan, mata, buta warna, gigi, dan lainnya. Arahan, bukan pemeriksaan medis.</p></div>
-          <div class="card card-lift reveal !p-7"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-dark"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zM4 19a2 2 0 012-2h13"/></svg></div><h3 class="mt-5 text-lg font-bold">Akademik</h3><p class="mt-3 text-sm leading-relaxed text-slate-600">TPA, Matematika, B. Inggris, Wawasan Kebangsaan, dan Pengetahuan Umum.</p></div>
-          <div class="card card-lift reveal !p-7"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-dark"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3zM5 11a7 7 0 0014 0M12 18v3"/></svg></div><h3 class="mt-5 text-lg font-bold">Mentor Alumni & Wawancara</h3><p class="mt-3 text-sm leading-relaxed text-slate-600">Pendampingan wawancara dan kesiapan mental bersama alumni yang pernah lolos.</p></div>
+    <div class="mt-12 border-b border-garis lg:mt-16">
+      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+        <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
+          <img src="/assets/img/prog-akmil.webp" alt="Taruna Akmil berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
+        </div>
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3">
+            <img src="/assets/logos/akmil.webp" alt="Logo Akmil" width="64" height="64" loading="lazy" class="h-9 w-9 shrink-0 object-contain">
+            <h3 class="font-display text-4xl leading-[1.0]">Akmil</h3>
+          </div>
+          <p class="mt-2 text-sm font-semibold text-loreng">Akademi Militer, TNI AD</p>
+          <p class="mt-3 max-w-prose text-base leading-[1.65]">Persiapan seleksi pendidikan perwira TNI Angkatan Darat melalui akademi militer.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-tinta">Materi fokus</p>
+          <ul class="mt-2 space-y-2 text-base leading-relaxed"><li>Tes akademik &amp; TPA</li><li>Psikotes kepribadian</li><li>Samapta &amp; renang</li></ul>
+        </div>
+        <div class="lg:col-span-2 lg:text-right">
+          <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
+        </div>
+      </article>
+      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+        <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
+          <img src="/assets/img/prog-akpol.webp" alt="Taruna Akpol berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
+        </div>
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3">
+            <img src="/assets/logos/akpol.webp" alt="Logo Akpol" width="64" height="64" loading="lazy" class="h-9 w-9 shrink-0 object-contain">
+            <h3 class="font-display text-4xl leading-[1.0]">Akpol</h3>
+          </div>
+          <p class="mt-2 text-sm font-semibold text-loreng">Akademi Kepolisian</p>
+          <p class="mt-3 max-w-prose text-base leading-[1.65]">Persiapan seleksi Akademi Kepolisian dengan fokus pada kesiapan fisik dan mental.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-tinta">Materi fokus</p>
+          <ul class="mt-2 space-y-2 text-base leading-relaxed"><li>Wawasan kebangsaan</li><li>Tes akademik</li><li>Wawancara &amp; mental</li></ul>
+        </div>
+        <div class="lg:col-span-2 lg:text-right">
+          <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
+        </div>
+      </article>
+      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+        <div class="aspect-video overflow-hidden border border-garis bg-white lg:col-span-3 lg:aspect-[4/3]">
+          <img src="/assets/img/flag.webp" alt="" width="1400" height="781" loading="lazy" class="h-full w-full object-contain mix-blend-multiply">
+        </div>
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3">
+            <span aria-hidden="true" class="flex h-9 w-9 shrink-0 items-center justify-center border border-garis bg-white text-tinta"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M5 14a7 7 0 0014 0"/></svg></span>
+            <h3 class="font-display text-4xl leading-[1.0]">AAL</h3>
+          </div>
+          <p class="mt-2 text-sm font-semibold text-loreng">Akademi Angkatan Laut</p>
+          <p class="mt-3 max-w-prose text-base leading-[1.65]">Persiapan seleksi Akademi Angkatan Laut, termasuk kesiapan renang dan kesehatan.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-tinta">Materi fokus</p>
+          <ul class="mt-2 space-y-2 text-base leading-relaxed"><li>Renang &amp; samapta</li><li>Matematika &amp; B. Inggris</li><li>Pemeriksaan kesehatan</li></ul>
+        </div>
+        <div class="lg:col-span-2 lg:text-right">
+          <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
+        </div>
+      </article>
+      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+        <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
+          <img src="/assets/img/prog-aau.webp" alt="Taruna AAU berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
+        </div>
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3">
+            <img src="/assets/logos/aau.webp" alt="Logo AAU" width="64" height="64" loading="lazy" class="h-9 w-9 shrink-0 object-contain">
+            <h3 class="font-display text-4xl leading-[1.0]">AAU</h3>
+          </div>
+          <p class="mt-2 text-sm font-semibold text-loreng">Akademi Angkatan Udara</p>
+          <p class="mt-3 max-w-prose text-base leading-[1.65]">Persiapan seleksi Akademi Angkatan Udara dengan latihan psikotes dan akademik.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-tinta">Materi fokus</p>
+          <ul class="mt-2 space-y-2 text-base leading-relaxed"><li>Psikotes kecerdasan</li><li>TPA &amp; numerik</li><li>Kesiapan rikkes</li></ul>
+        </div>
+        <div class="lg:col-span-2 lg:text-right">
+          <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
+        </div>
+      </article>
+      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+        <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
+          <img src="/assets/img/prog-bintara.webp" alt="Peserta Bintara berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
+        </div>
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3">
+            <div class="flex items-center gap-1" aria-hidden="true"><img src="/assets/logos/bintara-tni.webp" alt="" width="64" height="64" loading="lazy" class="h-9 w-9 object-contain"><img src="/assets/logos/tamtama.webp" alt="" width="64" height="64" loading="lazy" class="h-9 w-9 object-contain"></div>
+            <h3 class="font-display text-4xl leading-[1.0]">Bintara &amp; Tamtama</h3>
+          </div>
+          <p class="mt-2 text-sm font-semibold text-loreng">TNI / Polri</p>
+          <p class="mt-3 max-w-prose text-base leading-[1.65]">Persiapan seleksi Bintara dan Tamtama dengan jalur yang lebih ringkas dan terstruktur.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-tinta">Materi fokus</p>
+          <ul class="mt-2 space-y-2 text-base leading-relaxed"><li>Samapta terarah</li><li>Tes pengetahuan umum</li><li>Wawancara dasar</li></ul>
+        </div>
+        <div class="lg:col-span-2 lg:text-right">
+          <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
+        </div>
+      </article>
+      <article class="grid items-start gap-6 border-t border-garis py-10 lg:grid-cols-12 lg:items-center lg:gap-x-8">
+        <div class="aspect-video overflow-hidden bg-abu lg:col-span-3 lg:aspect-[4/3]">
+          <img src="/assets/img/prog-kedinasan.webp" alt="Peserta Sekolah Kedinasan berseragam" width="785" height="405" loading="lazy" class="h-full w-full object-cover object-top">
+        </div>
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3">
+            <img src="/assets/logos/sekolah-kedinasan.webp" alt="Logo Sekolah Kedinasan" width="64" height="64" loading="lazy" class="h-9 w-9 shrink-0 object-contain">
+            <h3 class="font-display text-4xl leading-[1.0]">Sekolah Kedinasan</h3>
+          </div>
+          <p class="mt-2 text-sm font-semibold text-loreng">IPDN, PKN STAN, STIS, STIN, dll.</p>
+          <p class="mt-3 max-w-prose text-base leading-[1.65]">Persiapan seleksi sekolah kedinasan dengan fokus akademik dan tes kemampuan.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-tinta">Materi fokus</p>
+          <ul class="mt-2 space-y-2 text-base leading-relaxed"><li>TPA &amp; matematika</li><li>B. Inggris &amp; pengetahuan umum</li><li>Wawancara &amp; psikotes</li></ul>
+        </div>
+        <div class="lg:col-span-2 lg:text-right">
+          <a href="/program" class="text-sm font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:decoration-merah">Selengkapnya</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="tahapan" class="bg-white py-24 lg:py-32" aria-labelledby="tahapan-title">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mb-14 md:flex md:items-end md:justify-between md:gap-12 lg:mb-20"><div class="max-w-2xl reveal"><p class="section-eyebrow">Tahapan</p><h2 id="tahapan-title" class="mt-4 text-3xl font-bold sm:text-5xl">Tahapan Seleksi</h2><p class="mt-5 text-base leading-relaxed text-slate-600">Tujuh tahap umum seleksi. Kami melatih setiap tahap sesuai urutannya.</p></div><img src="/assets/img/roadmap-model.webp" alt="Taruna berseragam menunjuk tahapan seleksi" width="894" height="1200" loading="lazy" class="hidden max-h-[420px] w-auto object-contain md:block"></div>
-    <ol class="relative space-y-0 border-l-2 border-gold/40 pl-0 md:flex md:space-y-0 md:border-l-0 md:border-t-2 md:pl-0">
-          <li class="reveal relative flex gap-6 md:flex-1 md:flex-col md:items-center md:gap-5 md:text-center">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-white font-display text-lg font-semibold text-navy-900">1</div>
-            <div class="pb-10 md:pb-0"><h3 class="text-base font-bold leading-snug">Pendaftaran & Administrasi</h3><p class="mt-3 text-sm leading-relaxed text-slate-600"><span class="font-semibold text-gold-deep">Yang kami siapkan:</span> Berkas, jadwal, dan syarat administrasi dicek sejak awal.</p></div>
+<section id="keunggulan" class="bg-abu py-24 lg:py-36" aria-labelledby="keunggulan-title">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-12 lg:gap-x-16 lg:px-8">
+    <div class="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
+      <h2 id="keunggulan-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Persiapan lengkap, satu atap</h2>
+      <p class="mt-6 max-w-prose text-base leading-[1.65]">Dari akademik hingga mental, setiap aspek seleksi kami latih secara terstruktur. Orang tua juga mendapat laporan progres berkala, sehingga Anda ikut memantau perkembangan putra-putri.</p>
+      <ul class="mt-8 space-y-2.5">
+        <li class="flex items-center gap-3 text-base font-medium text-tinta"><span aria-hidden="true" class="h-2 w-2 shrink-0 bg-merah"></span>Laporan progres untuk orang tua</li>
+        <li class="flex items-center gap-3 text-base font-medium text-tinta"><span aria-hidden="true" class="h-2 w-2 shrink-0 bg-merah"></span>Mentor berpengalaman</li>
+      </ul>
+    </div>
+    <div class="lg:col-span-7 lg:col-start-6">
+      <dl class="grid gap-x-12 sm:grid-cols-2">
+        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Tryout CAT berkala</dt><dd class="mt-2 text-base leading-[1.65]">Simulasi seperti tes asli, lengkap dengan ranking dan pembahasan tiap soal.</dd></div>
+        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Psikotes</dt><dd class="mt-2 text-base leading-[1.65]">Latihan kecerdasan, kecermatan, dan kepribadian, termasuk pola tes gaya Kraepelin &amp; MMPI.</dd></div>
+        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Samapta &amp; Renang</dt><dd class="mt-2 text-base leading-[1.65]">Lari 12 menit, pull up, push up, sit up, shuttle run, dan renang, dengan coaching bertahap.</dd></div>
+        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Panduan Kesehatan</dt><dd class="mt-2 text-base leading-[1.65]">Persiapan rikkes: tinggi/berat badan, mata, buta warna, gigi, dan lainnya. Arahan, bukan pemeriksaan medis.</dd></div>
+        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Akademik</dt><dd class="mt-2 text-base leading-[1.65]">TPA, Matematika, B. Inggris, Wawasan Kebangsaan, dan Pengetahuan Umum.</dd></div>
+        <div class="border-t border-garis py-6"><dt class="text-base font-bold text-tinta">Mentor Alumni &amp; Wawancara</dt><dd class="mt-2 text-base leading-[1.65]">Pendampingan wawancara dan kesiapan mental bersama alumni yang pernah lolos.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="tahapan" class="bg-kertas py-24 lg:py-36" aria-labelledby="tahapan-title">
+  <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+    <div class="grid items-end gap-8 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <h2 id="tahapan-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Tahapan seleksi</h2>
+        <p class="mt-5 max-w-prose text-base leading-[1.65]">Tujuh tahap umum seleksi. Kami melatih setiap tahap sesuai urutannya.</p>
+      </div>
+      <div class="flex justify-end lg:relative lg:z-10 lg:col-span-4 lg:col-start-9 lg:-mr-4 xl:-mr-16 lg:-mb-20">
+        <img src="/assets/img/roadmap-model.webp" alt="Taruna berseragam menunjuk tahapan seleksi" width="894" height="1200" loading="lazy" class="max-h-44 w-auto object-contain sm:max-h-56 lg:max-h-[28rem]">
+      </div>
+    </div>
+    <ol class="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+          <li class="border-t border-tinta pt-5">
+            <div class="flex items-start gap-4">
+              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">1</p>
+              <div class="min-w-0">
+                <h3 class="text-lg font-bold leading-snug">Pendaftaran &amp; Administrasi</h3>
+                <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Berkas, jadwal, dan syarat administrasi dicek sejak awal.</p>
+              </div>
+            </div>
           </li>
-          <li class="reveal relative flex gap-6 md:flex-1 md:flex-col md:items-center md:gap-5 md:text-center">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-white font-display text-lg font-semibold text-navy-900">2</div>
-            <div class="pb-10 md:pb-0"><h3 class="text-base font-bold leading-snug">Pemeriksaan Kesehatan (Rikkes)</h3><p class="mt-3 text-sm leading-relaxed text-slate-600"><span class="font-semibold text-gold-deep">Yang kami siapkan:</span> Panduan persiapan fisik dan pengenalan prosedur rikkes.</p></div>
+          <li class="border-t border-tinta pt-5">
+            <div class="flex items-start gap-4">
+              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">2</p>
+              <div class="min-w-0">
+                <h3 class="text-lg font-bold leading-snug">Pemeriksaan Kesehatan (Rikkes)</h3>
+                <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Panduan persiapan fisik dan pengenalan prosedur rikkes.</p>
+              </div>
+            </div>
           </li>
-          <li class="reveal relative flex gap-6 md:flex-1 md:flex-col md:items-center md:gap-5 md:text-center">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-white font-display text-lg font-semibold text-navy-900">3</div>
-            <div class="pb-10 md:pb-0"><h3 class="text-base font-bold leading-snug">Tes Psikologi</h3><p class="mt-3 text-sm leading-relaxed text-slate-600"><span class="font-semibold text-gold-deep">Yang kami siapkan:</span> Latihan psikotes dan simulasi pola soal kepribadian.</p></div>
+          <li class="border-t border-tinta pt-5">
+            <div class="flex items-start gap-4">
+              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">3</p>
+              <div class="min-w-0">
+                <h3 class="text-lg font-bold leading-snug">Tes Psikologi</h3>
+                <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Latihan psikotes dan simulasi pola soal kepribadian.</p>
+              </div>
+            </div>
           </li>
-          <li class="reveal relative flex gap-6 md:flex-1 md:flex-col md:items-center md:gap-5 md:text-center">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-white font-display text-lg font-semibold text-navy-900">4</div>
-            <div class="pb-10 md:pb-0"><h3 class="text-base font-bold leading-snug">Tes Akademik</h3><p class="mt-3 text-sm leading-relaxed text-slate-600"><span class="font-semibold text-gold-deep">Yang kami siapkan:</span> TPA, matematika, bahasa Inggris, dan pengetahuan umum.</p></div>
+          <li class="border-t border-tinta pt-5">
+            <div class="flex items-start gap-4">
+              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">4</p>
+              <div class="min-w-0">
+                <h3 class="text-lg font-bold leading-snug">Tes Akademik</h3>
+                <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> TPA, matematika, bahasa Inggris, dan pengetahuan umum.</p>
+              </div>
+            </div>
           </li>
-          <li class="reveal relative flex gap-6 md:flex-1 md:flex-col md:items-center md:gap-5 md:text-center">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-white font-display text-lg font-semibold text-navy-900">5</div>
-            <div class="pb-10 md:pb-0"><h3 class="text-base font-bold leading-snug">Tes Kesamaptaan Jasmani & Renang</h3><p class="mt-3 text-sm leading-relaxed text-slate-600"><span class="font-semibold text-gold-deep">Yang kami siapkan:</span> Coaching lari, kekuatan, dan renang bertahap.</p></div>
+          <li class="border-t border-tinta pt-5">
+            <div class="flex items-start gap-4">
+              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">5</p>
+              <div class="min-w-0">
+                <h3 class="text-lg font-bold leading-snug">Tes Kesamaptaan Jasmani &amp; Renang</h3>
+                <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Coaching lari, kekuatan, dan renang bertahap.</p>
+              </div>
+            </div>
           </li>
-          <li class="reveal relative flex gap-6 md:flex-1 md:flex-col md:items-center md:gap-5 md:text-center">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-white font-display text-lg font-semibold text-navy-900">6</div>
-            <div class="pb-10 md:pb-0"><h3 class="text-base font-bold leading-snug">Wawancara / Mental Ideologi</h3><p class="mt-3 text-sm leading-relaxed text-slate-600"><span class="font-semibold text-gold-deep">Yang kami siapkan:</span> Latihan wawancara dan penguatan wawasan kebangsaan.</p></div>
+          <li class="border-t border-tinta pt-5">
+            <div class="flex items-start gap-4">
+              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">6</p>
+              <div class="min-w-0">
+                <h3 class="text-lg font-bold leading-snug">Wawancara / Mental Ideologi</h3>
+                <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Latihan wawancara dan penguatan wawasan kebangsaan.</p>
+              </div>
+            </div>
           </li>
-          <li class="reveal relative flex gap-6 md:flex-1 md:flex-col md:items-center md:gap-5 md:text-center">
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-white font-display text-lg font-semibold text-navy-900">7</div>
-            <div class="pb-2 md:pb-0"><h3 class="text-base font-bold leading-snug">Pantukhir (Penentuan Akhir)</h3><p class="mt-3 text-sm leading-relaxed text-slate-600"><span class="font-semibold text-gold-deep">Yang kami siapkan:</span> Evaluasi akhir dan kesiapan menjalani pendidikan.</p></div>
+          <li class="border-t border-tinta pt-5">
+            <div class="flex items-start gap-4">
+              <p class="tnum w-12 shrink-0 font-display text-4xl font-bold leading-none text-loreng sm:text-5xl">7</p>
+              <div class="min-w-0">
+                <h3 class="text-lg font-bold leading-snug">Pantukhir (Penentuan Akhir)</h3>
+                <p class="mt-2 text-base leading-[1.65]"><span class="font-semibold text-tinta">Yang kami siapkan:</span> Evaluasi akhir dan kesiapan menjalani pendidikan.</p>
+              </div>
+            </div>
           </li>
     </ol>
-    <p class="mt-14 max-w-prose rounded-2xl border border-slate-200 bg-sand p-6 text-sm leading-relaxed text-slate-600 reveal">Catatan: Tahapan dapat berbeda per instansi dan per tahun. Selalu cek pengumuman resmi panitia penerimaan.</p>
+    <p class="mt-16 max-w-prose border-t border-garis pt-6 text-sm leading-[1.65]">Catatan: Tahapan dapat berbeda per instansi dan per tahun. Selalu cek pengumuman resmi panitia penerimaan.</p>
   </div>
 </section>
 
-<section id="harga" class="bg-sand py-24 lg:py-32" aria-labelledby="harga-title">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto mb-14 max-w-2xl text-center reveal lg:mb-20">
-      <p class="section-eyebrow justify-center">Harga</p>
-      <h2 id="harga-title" class="mt-4 text-3xl font-bold sm:text-5xl">Harga Jelas, Tanpa Biaya Tersembunyi</h2>
-    </div>
-    <div class="grid gap-8 md:grid-cols-3 md:items-stretch lg:gap-10">
-        <article class="card reveal relative flex flex-col">
-          <span class="w-fit rounded-full bg-olive/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-olive">Harga contoh</span>
-          <h3 class="mt-5 text-2xl font-bold">Online Class</h3>
-          <p class="mt-5 flex items-baseline gap-2"><span class="text-sm font-semibold text-navy-900">Rp</span><span class="font-display text-4xl font-bold text-navy-900">2.450.000</span><span class="text-sm text-slate-600">/ 3 bulan</span></p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-navy-900">Termasuk</p>
-          <ul class="mt-4 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Live class Zoom 2x/minggu</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Akses bank soal 3.000+</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tryout CAT 2x/bulan</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Rekaman kelas</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Grup mentoring</li></ul>
-          <p class="mt-8 text-xs leading-relaxed text-slate-600">Belum termasuk: biaya pendaftaran resmi instansi, transportasi, pemeriksaan medis di klinik.</p>
+<section id="harga" class="bg-abu py-24 lg:py-36" aria-labelledby="harga-title">
+  <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+    <h2 id="harga-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Harga jelas, tanpa biaya tersembunyi</h2>
+    <div class="mt-12 border border-garis bg-white lg:mt-16">
+      <div class="grid divide-y divide-garis md:grid-cols-3 md:divide-x md:divide-y-0">
+        <article class="flex flex-col p-8 lg:p-10">
+          <span class="tag w-fit">Harga contoh</span>
+          <h3 class="mt-6 font-display text-4xl leading-[1.0]">Online Class</h3>
+          <p class="mt-5 flex items-baseline gap-2"><span class="text-sm font-semibold text-tinta">Rp</span><span class="tnum font-display text-5xl font-bold leading-none text-tinta">2.450.000</span><span class="text-sm">/ 3 bulan</span></p>
+          <p class="mt-8 text-sm font-semibold text-tinta">Termasuk</p>
+          <ul class="mt-3 space-y-2 text-base leading-[1.65]">
+            <li>Live class Zoom 2x/minggu</li>
+            <li>Akses bank soal 3.000+</li>
+            <li>Tryout CAT 2x/bulan</li>
+            <li>Rekaman kelas</li>
+            <li>Grup mentoring</li>
+          </ul>
+          <p class="mt-8 text-xs leading-[1.65]">Belum termasuk: biaya pendaftaran resmi instansi, transportasi, pemeriksaan medis di klinik.</p>
           <div class="mt-auto pt-8"><!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
-<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20tertarik%20paket%20Online%20Class.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20..." target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-navy-900 px-6 py-3 font-semibold text-white transition hover:bg-navy-700">Pilih Online Class</a></div>
+<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20tertarik%20paket%20Online%20Class.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20..." target="_blank" rel="noopener" class="btn-outline w-full">Pilih Online Class</a></div>
         </article>
-        <article class="reveal relative flex flex-col rounded-2xl border border-gold bg-navy-900 p-8 shadow-2xl shadow-navy-900/25 lg:p-10 md:-mt-4 md:mb-4">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-xs font-bold uppercase tracking-widest text-navy-900">Paling Populer</span>
-          <span class="w-fit rounded-full bg-gold/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-gold-light">Harga contoh</span>
-          <h3 class="mt-5 text-2xl font-bold text-white">Intensif Small Class</h3>
-          <p class="mt-5 flex items-baseline gap-2"><span class="text-sm font-semibold text-gold-light">Rp</span><span class="font-display text-4xl font-bold text-gold-light">7.900.000</span><span class="text-sm text-slate-200">/ 4 bulan</span></p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-light">Termasuk</p>
-          <ul class="mt-4 space-y-3 text-sm text-slate-100"><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Maks. 12 siswa/kelas</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tatap muka 4x/minggu</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Coaching samapta 3x/minggu + renang</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Simulasi psikotes & wawancara</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Laporan progres bulanan untuk orang tua</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Tryout CAT mingguan</li></ul>
-          <p class="mt-8 text-xs leading-relaxed text-slate-300">Belum termasuk: biaya pendaftaran resmi instansi, transportasi, pemeriksaan medis di klinik.</p>
+        <article class="flex flex-col bg-tinta p-8 text-white lg:p-10">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="rounded-sm bg-white px-3 py-1 text-sm font-semibold text-tinta">Paling dipilih</span>
+            <span class="rounded-sm border border-white/25 px-3 py-1 text-xs font-semibold text-white/70">Harga contoh</span>
+          </div>
+          <h3 class="mt-6 font-display text-4xl leading-[1.0] text-white">Intensif Small Class</h3>
+          <p class="mt-5 flex items-baseline gap-2"><span class="text-sm font-semibold text-white">Rp</span><span class="tnum font-display text-5xl font-bold leading-none text-white">7.900.000</span><span class="text-sm text-white/70">/ 4 bulan</span></p>
+          <p class="mt-8 text-sm font-semibold text-white">Termasuk</p>
+          <ul class="mt-3 space-y-2 text-base leading-[1.65] text-white/80">
+            <li>Maks. 12 siswa/kelas</li>
+            <li>Tatap muka 4x/minggu</li>
+            <li>Coaching samapta 3x/minggu + renang</li>
+            <li>Simulasi psikotes &amp; wawancara</li>
+            <li>Laporan progres bulanan untuk orang tua</li>
+            <li>Tryout CAT mingguan</li>
+          </ul>
+          <p class="mt-8 text-xs leading-[1.65] text-white/70">Belum termasuk: biaya pendaftaran resmi instansi, transportasi, pemeriksaan medis di klinik.</p>
           <div class="mt-auto pt-8"><!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
 <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20tertarik%20paket%20Intensif%20Small%20Class.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20..." target="_blank" rel="noopener" class="btn-primary w-full">Pilih Intensif Small Class</a></div>
         </article>
-        <article class="card reveal relative flex flex-col">
-          <span class="w-fit rounded-full bg-olive/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-olive">Harga contoh</span>
-          <h3 class="mt-5 text-2xl font-bold">Karantina Camp</h3>
-          <p class="mt-5 flex items-baseline gap-2"><span class="text-sm font-semibold text-navy-900">Rp</span><span class="font-display text-4xl font-bold text-navy-900">18.500.000</span><span class="text-sm text-slate-600">/ 2 bulan</span></p>
-          <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-navy-900">Termasuk</p>
-          <ul class="mt-4 space-y-3 text-sm text-slate-600"><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Asrama + makan 3x sehari</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Jadwal disiplin harian</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Latihan fisik setiap hari</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Pendampingan rikkes</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Mentor alumni</li><li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Garansi ikut ulang (S&K)</li></ul>
-          <p class="mt-8 text-xs leading-relaxed text-slate-600">Belum termasuk: biaya pendaftaran resmi instansi, transportasi, pemeriksaan medis di klinik.</p>
+        <article class="flex flex-col p-8 lg:p-10">
+          <span class="tag w-fit">Harga contoh</span>
+          <h3 class="mt-6 font-display text-4xl leading-[1.0]">Karantina Camp</h3>
+          <p class="mt-5 flex items-baseline gap-2"><span class="text-sm font-semibold text-tinta">Rp</span><span class="tnum font-display text-5xl font-bold leading-none text-tinta">18.500.000</span><span class="text-sm">/ 2 bulan</span></p>
+          <p class="mt-8 text-sm font-semibold text-tinta">Termasuk</p>
+          <ul class="mt-3 space-y-2 text-base leading-[1.65]">
+            <li>Asrama + makan 3x sehari</li>
+            <li>Jadwal disiplin harian</li>
+            <li>Latihan fisik setiap hari</li>
+            <li>Pendampingan rikkes</li>
+            <li>Mentor alumni</li>
+            <li>Garansi ikut ulang (S&amp;K)</li>
+          </ul>
+          <p class="mt-8 text-xs leading-[1.65]">Belum termasuk: biaya pendaftaran resmi instansi, transportasi, pemeriksaan medis di klinik.</p>
           <div class="mt-auto pt-8"><!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
-<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20tertarik%20paket%20Karantina%20Camp.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20..." target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-navy-900 px-6 py-3 font-semibold text-white transition hover:bg-navy-700">Pilih Karantina Camp</a></div>
+<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20tertarik%20paket%20Karantina%20Camp.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20..." target="_blank" rel="noopener" class="btn-outline w-full">Pilih Karantina Camp</a></div>
         </article>
-    </div>
-    <p class="mx-auto mt-14 max-w-3xl text-center text-sm leading-relaxed text-slate-600">Harga di atas adalah contoh untuk mockup. Biaya pendaftaran bimbel Rp 0. Cicilan tersedia (contoh).</p>
-  </div>
-</section>
-
-<section id="garansi" class="bg-white py-24 lg:py-32" aria-labelledby="garansi-title">
-  <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-5 lg:gap-20 lg:px-8">
-    <div class="reveal lg:col-span-3">
-      <p class="section-eyebrow">Garansi Jujur</p>
-      <h2 id="garansi-title" class="mt-4 text-3xl font-bold leading-tight sm:text-5xl">Belum Lulus? <span class="text-gold-dark">Ikut Ulang Gratis.</span></h2>
-      <p class="mt-6 max-w-prose text-base leading-8 text-slate-600">Jika peserta paket Intensif atau Karantina belum lolos seleksi pada tahun yang sama, boleh mengikuti ulang program yang sama pada periode berikutnya tanpa biaya bimbel.</p>
-      <div class="mt-8 max-w-prose rounded-2xl border border-gold/50 bg-sand p-6">
-        <p class="font-semibold leading-relaxed text-navy-900">Kami tidak menjanjikan kelulusan — tidak ada bimbel yang bisa menjamin hasil seleksi negara. Yang kami jamin adalah proses persiapan yang serius dan terukur.</p>
       </div>
-      <h3 class="mt-12 text-lg font-bold">Syarat &amp; Ketentuan (contoh)</h3>
-      <ul class="mt-5 space-y-4 text-sm leading-relaxed text-slate-600">
-        <li class="flex gap-3"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Kehadiran minimal 90% sesi kelas.</li>
-        <li class="flex gap-3"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Mengikuti minimal 80% tryout CAT yang dijadwalkan.</li>
-        <li class="flex gap-3"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Memenuhi syarat administrasi instansi tujuan.</li>
-        <li class="flex gap-3"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Klaim maksimal 30 hari setelah pengumuman hasil.</li>
-        <li class="flex gap-3"><svg class="h-5 w-5 shrink-0 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Garansi berlaku 1x per peserta.</li>
-      </ul>
-      <a href="/tentang" class="mt-10 inline-flex items-center gap-2 font-semibold text-gold-deep hover:text-navy-900">Baca S&amp;K lengkap <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-    <div class="reveal flex justify-center lg:col-span-2">
-      <svg viewBox="0 0 200 220" class="h-64 w-56 drop-shadow-[0_20px_40px_rgba(201,162,39,0.25)]" role="img" aria-label="Ilustrasi perisai emas">
-        <defs><linearGradient id="gold-shield" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E3C35A"/><stop offset="0.5" stop-color="#C9A227"/><stop offset="1" stop-color="#A6851C"/></linearGradient></defs>
-        <path d="M100 8 L184 36 V110 C184 160 150 194 100 212 C50 194 16 160 16 110 V36 Z" fill="url(#gold-shield)"/>
-        <path d="M100 26 L168 50 V110 C168 149 141 178 100 194 C59 178 32 149 32 110 V50 Z" fill="#0B1426" opacity="0.92"/>
-        <path d="M100 66 L118 102 H82 Z" fill="url(#gold-shield)"/>
-        <path d="M70 124 L100 142 L130 124" fill="none" stroke="url(#gold-shield)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+    <p class="mt-10 max-w-prose text-sm leading-[1.65]">Harga di atas adalah contoh untuk mockup. Biaya pendaftaran bimbel Rp 0. Cicilan tersedia (contoh).</p>
+  </div>
+</section>
+
+<section id="garansi" class="bg-kertas py-24 lg:py-36" aria-labelledby="garansi-title">
+  <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+    <div class="grid gap-10 border border-tinta bg-white p-8 sm:p-10 lg:grid-cols-12 lg:gap-x-16 lg:p-14">
+      <div class="lg:col-span-8">
+        <h2 id="garansi-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Belum lulus? Ikut ulang gratis.</h2>
+        <p class="mt-6 max-w-prose text-base leading-[1.65]">Jika peserta paket Intensif atau Karantina belum lolos seleksi pada tahun yang sama, boleh mengikuti ulang program yang sama pada periode berikutnya tanpa biaya bimbel.</p>
+        <p class="mt-8 max-w-prose border border-garis bg-abu p-6 text-base font-semibold leading-[1.65] text-tinta">Kami tidak menjanjikan kelulusan. Tidak ada bimbel yang bisa menjamin hasil seleksi negara. Yang kami jamin adalah proses persiapan yang serius dan terukur.</p>
+        <h3 class="mt-12 font-sans text-lg font-bold">Syarat &amp; Ketentuan (contoh)</h3>
+        <ul class="mt-4 border-b border-garis text-base leading-[1.65]">
+          <li class="border-t border-garis py-4">Kehadiran minimal 90% sesi kelas.</li>
+          <li class="border-t border-garis py-4">Mengikuti minimal 80% tryout CAT yang dijadwalkan.</li>
+          <li class="border-t border-garis py-4">Memenuhi syarat administrasi instansi tujuan.</li>
+          <li class="border-t border-garis py-4">Klaim maksimal 30 hari setelah pengumuman hasil.</li>
+          <li class="border-t border-garis py-4">Garansi berlaku 1x per peserta.</li>
+        </ul>
+        <a href="/tentang" class="mt-8 inline-block font-semibold text-tinta underline decoration-garis decoration-2 underline-offset-4 transition hover:text-merah hover:decoration-merah">Baca S&amp;K lengkap</a>
+      </div>
+      <div class="flex items-center justify-center lg:col-span-4">
+        <div role="img" aria-label="Stempel garansi: ikut ulang gratis, S&K berlaku" class="relative flex h-56 w-56 shrink-0 -rotate-[8deg] flex-col items-center justify-center gap-3 rounded-full border-[3px] border-merah px-8 text-center text-merah sm:h-64 sm:w-64">
+          <span aria-hidden="true" class="absolute inset-[7px] rounded-full border-[1.5px] border-current"></span>
+          <p class="font-display text-4xl font-bold leading-[1.0]">Ikut ulang gratis</p>
+          <span aria-hidden="true" class="h-px w-16 bg-current"></span>
+          <p class="text-sm font-semibold">S&amp;K berlaku</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="testimoni" class="bg-sand py-24 lg:py-32" aria-labelledby="testi-title">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto mb-14 max-w-2xl reveal lg:mb-20"><p class="section-eyebrow">Testimoni</p><h2 id="testi-title" class="mt-4 text-3xl font-bold sm:text-5xl">Cerita Taruna Kami</h2>
-      <span class="mt-6 inline-block rounded-md border border-gold/50 bg-gold/10 px-3 py-1.5 text-xs font-semibold text-gold-deep">Testimoni contoh — akan diganti testimoni asli dengan izin</span></div>
-    <div class="grid gap-8 md:grid-cols-3 lg:gap-10">
-        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><img src="/assets/img/testi-t1.webp" alt="" width="400" height="400" loading="lazy" class="h-16 w-16 rounded-full object-cover object-top ring-2 ring-gold/40"><figcaption><p class="font-bold text-navy-900">Rizky A. (contoh)</p><p class="text-xs text-gold-deep">Lolos Bintara TNI 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Latihan wawancara dan simulasi psikotes benar-benar membantu saya tetap tenang di hari seleksi.”</blockquote></figure>
-        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><img src="/assets/img/testi-t2.webp" alt="" width="400" height="400" loading="lazy" class="h-16 w-16 rounded-full object-cover object-top ring-2 ring-gold/40"><figcaption><p class="font-bold text-navy-900">Sinta M. (contoh)</p><p class="text-xs text-gold-deep">Lolos Bintara Polri 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Coaching samapta yang bertahap membuat fisik saya siap tanpa cedera. Laporan progresnya juga jelas.”</blockquote></figure>
-        <figure class="card reveal flex flex-col !p-8"><div class="flex items-center gap-4"><img src="/assets/img/testi-t3.webp" alt="" width="400" height="400" loading="lazy" class="h-16 w-16 rounded-full object-cover object-top ring-2 ring-gold/40"><figcaption><p class="font-bold text-navy-900">Dimas P. (contoh)</p><p class="text-xs text-gold-deep">Lolos Sekolah Kedinasan 2026 (contoh)</p></figcaption></div><blockquote class="mt-6 text-sm leading-8 text-slate-600">“Tryout mingguannya seperti tes asli. Pembahasannya rinci sehingga saya tahu di mana harus memperbaiki.”</blockquote></figure>
+<section id="testimoni" class="bg-abu py-24 lg:py-36" aria-labelledby="testi-title">
+  <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <h2 id="testi-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Cerita taruna kami</h2>
+      <span class="tag">Testimoni contoh, akan diganti testimoni asli dengan izin</span>
+    </div>
+    <div class="mt-12 grid gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-x-12">
+      <figure class="border border-garis bg-white p-8 lg:col-span-7 lg:p-12">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
+          <img src="/assets/img/testi-t1.webp" alt="" width="400" height="400" loading="lazy" class="h-48 w-40 shrink-0 self-start object-cover object-top">
+          <div class="min-w-0">
+            <blockquote class="max-w-prose text-xl font-medium leading-[1.5] text-tinta lg:text-2xl">Latihan wawancara dan simulasi psikotes benar-benar membantu saya tetap tenang di hari seleksi.</blockquote>
+            <figcaption class="mt-6">
+              <p class="font-display text-3xl leading-[1.05]">Rizky A. (contoh)</p>
+              <p class="mt-1 text-sm font-semibold text-loreng">Lolos Bintara TNI 2026 (contoh)</p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+      <div class="lg:col-span-5">
+        <figure class="border-t border-tinta pt-6">
+          <blockquote class="text-base leading-[1.65]">Coaching samapta yang bertahap membuat fisik saya siap tanpa cedera. Laporan progresnya juga jelas.</blockquote>
+          <figcaption class="mt-5 flex items-center gap-4">
+            <img src="/assets/img/testi-t2.webp" alt="" width="400" height="400" loading="lazy" class="h-14 w-14 shrink-0 rounded-full object-cover object-top">
+            <div>
+              <p class="font-semibold text-tinta">Sinta M. (contoh)</p>
+              <p class="mt-0.5 text-sm font-semibold text-loreng">Lolos Bintara Polri 2026 (contoh)</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="mt-10 border-t border-tinta pt-6">
+          <blockquote class="text-base leading-[1.65]">Tryout mingguannya seperti tes asli. Pembahasannya rinci sehingga saya tahu di mana harus memperbaiki.</blockquote>
+          <figcaption class="mt-5 flex items-center gap-4">
+            <img src="/assets/img/testi-t3.webp" alt="" width="400" height="400" loading="lazy" class="h-14 w-14 shrink-0 rounded-full object-cover object-top">
+            <div>
+              <p class="font-semibold text-tinta">Dimas P. (contoh)</p>
+              <p class="mt-0.5 text-sm font-semibold text-loreng">Lolos Sekolah Kedinasan 2026 (contoh)</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="faq" class="bg-white py-24 lg:py-32" aria-labelledby="faq-title">
-  <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:gap-20 lg:px-8">
-    <div class="reveal lg:sticky lg:top-28 lg:self-start"><p class="section-eyebrow">FAQ</p><h2 id="faq-title" class="mt-4 text-3xl font-bold sm:text-5xl">Pertanyaan Umum</h2><p class="mt-5 text-base leading-relaxed text-slate-600">Belum menemukan jawaban? Hubungi kami langsung lewat WhatsApp.</p><img src="/assets/img/faq-model.webp" alt="Mentor berseragam menunjuk ke daftar pertanyaan" width="713" height="1200" loading="lazy" class="mt-10 hidden w-full max-w-xs lg:block"></div>
-    <div class="reveal lg:col-span-2">
-        <details class="faq-item group border-b border-slate-200 py-6" open><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Apakah ada kelas online untuk luar kota?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Ya. Paket Online Class dapat diikuti dari mana saja melalui Zoom, dengan rekaman kelas dan grup mentoring.</p></details>
-        <details class="faq-item group border-b border-slate-200 py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Berapa usia dan tinggi badan minimal?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Persyaratan berbeda per instansi dan per tahun. Selalu cek sumber resmi panitia penerimaan. Kami bantu mengecek di sesi konsultasi.</p></details>
-        <details class="faq-item group border-b border-slate-200 py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Kapan sebaiknya mulai persiapan?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Idealnya 6–12 bulan sebelum tanggal pendaftaran dibuka, agar akademik, fisik, dan mental punya waktu berkembang.</p></details>
-        <details class="faq-item group border-b border-slate-200 py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Apakah ada latihan fisik dan renang?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Ada. Paket Intensif mencakup coaching samapta 3x/minggu dan renang. Paket Karantina memiliki latihan fisik setiap hari.</p></details>
-        <details class="faq-item group border-b border-slate-200 py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Bagaimana sistem garansinya?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Peserta paket Intensif/Karantina yang belum lolos pada tahun yang sama dapat ikut ulang program berikutnya tanpa biaya bimbel, sesuai S&K. Kami tidak menjanjikan kelulusan.</p></details>
-        <details class="faq-item group border-b border-slate-200 py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Apakah orang tua mendapat laporan?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Ya, paket Intensif menyertakan laporan progres bulanan untuk orang tua.</p></details>
-        <details class="faq-item group border-b border-slate-200 py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-navy-900 marker:hidden"><span>Bisa cicil?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold-dark transition duration-300"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p class="mt-4 pr-12 text-sm leading-8 text-slate-600">Cicilan tersedia (contoh). Detail skema pembayaran dibahas saat konsultasi.</p></details>
+<section id="faq" class="bg-kertas py-24 lg:py-36" aria-labelledby="faq-title">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-12 lg:gap-x-16 lg:px-8">
+    <div class="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
+      <h2 id="faq-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Pertanyaan umum</h2>
+      <p class="mt-5 max-w-prose text-base leading-[1.65]">Belum menemukan jawaban? Hubungi kami langsung lewat WhatsApp.</p>
+      <img src="/assets/img/faq-model.webp" alt="Mentor berseragam menunjuk ke daftar pertanyaan" width="713" height="1200" loading="lazy" class="mt-10 hidden w-full max-w-xs lg:block">
+    </div>
+    <div class="lg:col-span-7 lg:col-start-6">
+      <div class="border-b border-garis">
+        <details class="faq-item border-t border-garis py-6" open>
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-tinta marker:hidden"><span>Apakah ada kelas online untuk luar kota?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center border border-garis text-tinta"><svg class="h-4 w-4 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="mt-4 max-w-prose pr-4 text-base leading-[1.65]">Ya. Paket Online Class dapat diikuti dari mana saja melalui Zoom, dengan rekaman kelas dan grup mentoring.</p>
+        </details>
+        <details class="faq-item border-t border-garis py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-tinta marker:hidden"><span>Berapa usia dan tinggi badan minimal?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center border border-garis text-tinta"><svg class="h-4 w-4 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="mt-4 max-w-prose pr-4 text-base leading-[1.65]">Persyaratan berbeda per instansi dan per tahun. Selalu cek sumber resmi panitia penerimaan. Kami bantu mengecek di sesi konsultasi.</p>
+        </details>
+        <details class="faq-item border-t border-garis py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-tinta marker:hidden"><span>Kapan sebaiknya mulai persiapan?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center border border-garis text-tinta"><svg class="h-4 w-4 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="mt-4 max-w-prose pr-4 text-base leading-[1.65]">Idealnya 6–12 bulan sebelum tanggal pendaftaran dibuka, agar akademik, fisik, dan mental punya waktu berkembang.</p>
+        </details>
+        <details class="faq-item border-t border-garis py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-tinta marker:hidden"><span>Apakah ada latihan fisik dan renang?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center border border-garis text-tinta"><svg class="h-4 w-4 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="mt-4 max-w-prose pr-4 text-base leading-[1.65]">Ada. Paket Intensif mencakup coaching samapta 3x/minggu dan renang. Paket Karantina memiliki latihan fisik setiap hari.</p>
+        </details>
+        <details class="faq-item border-t border-garis py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-tinta marker:hidden"><span>Bagaimana sistem garansinya?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center border border-garis text-tinta"><svg class="h-4 w-4 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="mt-4 max-w-prose pr-4 text-base leading-[1.65]">Peserta paket Intensif/Karantina yang belum lolos pada tahun yang sama dapat ikut ulang program berikutnya tanpa biaya bimbel, sesuai S&K. Kami tidak menjanjikan kelulusan.</p>
+        </details>
+        <details class="faq-item border-t border-garis py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-tinta marker:hidden"><span>Apakah orang tua mendapat laporan?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center border border-garis text-tinta"><svg class="h-4 w-4 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="mt-4 max-w-prose pr-4 text-base leading-[1.65]">Ya, paket Intensif menyertakan laporan progres bulanan untuk orang tua.</p>
+        </details>
+        <details class="faq-item border-t border-garis py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-base font-semibold text-tinta marker:hidden"><span>Bisa cicil?</span><span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center border border-garis text-tinta"><svg class="h-4 w-4 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="mt-4 max-w-prose pr-4 text-base leading-[1.65]">Cicilan tersedia (contoh). Detail skema pembayaran dibahas saat konsultasi.</p>
+        </details>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="cta" class="relative overflow-hidden bg-navy-50 py-24 lg:py-32" aria-labelledby="cta-title">
-  <div class="bg-pattern pointer-events-none absolute inset-0 opacity-60"></div>
-  <img src="/assets/img/flag.webp" alt="" aria-hidden="true" width="1400" height="781" loading="lazy" class="pointer-events-none absolute -right-24 bottom-0 w-[520px] max-w-none opacity-25 mix-blend-multiply sm:opacity-30 lg:-right-10 lg:w-[640px]">
-  <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 reveal">
-    <h2 id="cta-title" class="text-3xl font-bold text-navy-900 sm:text-5xl">Siap Mulai Persiapan Seleksi?</h2>
-    <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">Konsultasi awal gratis. Kami bantu memetakan target instansi, kondisi akademik, dan paket yang paling sesuai.</p>
-    <div class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-      <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
-      <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary">Konsultasi via WhatsApp</a>
-      <a href="#program" class="btn-outline">Lihat Program</a>
+<section id="cta" class="border-t border-tinta bg-kertas py-24 lg:py-36" aria-labelledby="cta-title">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-6 lg:grid-cols-12 lg:gap-x-12 lg:px-8">
+    <div class="lg:col-span-7">
+
+      <h2 id="cta-title" class="font-display text-5xl leading-[1.0] lg:text-7xl">Siap mulai persiapan seleksi?</h2>
+      <p class="mt-5 text-base leading-[1.65]">Konsultasi awal gratis. Kami bantu memetakan target instansi, kondisi akademik, dan paket yang paling sesuai.</p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
+        <a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="btn-primary">Konsultasi via WhatsApp</a>
+        <a href="#program" class="btn-outline">Lihat Program</a>
+      </div>
+        </div>
+    <div class="order-first w-48 sm:w-64 lg:order-none lg:col-span-5 lg:w-full">
+      <img src="/assets/img/flag.webp" alt="" aria-hidden="true" width="1400" height="781" loading="lazy" class="h-auto w-full mix-blend-multiply">
     </div>
   </div>
 </section>
 </main>
-<footer class="border-t border-navy-700 bg-navy-900 pb-24 pt-16 md:pb-10">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<footer class="bg-tinta pb-24 pt-16 text-white/60 md:pb-10">
+  <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
     <div class="grid gap-10 md:grid-cols-4">
       <div>
-        <a href="/" class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-3" aria-label="Taruna Prima, beranda">
           <img src="/favicon.svg" alt="" width="40" height="40" class="h-10 w-10">
-          <span class="font-display text-lg font-semibold uppercase tracking-[0.2em] text-white">TARUNA PRIMA</span>
+          <span class="font-display text-2xl font-extrabold tracking-tight text-white">Taruna Prima</span>
         </a>
-        <p class="mt-5 max-w-xs text-sm leading-relaxed text-slate-300">Bimbingan persiapan seleksi Akmil, Akpol, AAL, AAU, Bintara, dan Sekolah Kedinasan. Terarah, terukur, dan transparan.</p>
+        <p class="mt-5 max-w-xs text-sm leading-[1.65]">Bimbingan persiapan seleksi Akmil, Akpol, AAL, AAU, Bintara, dan Sekolah Kedinasan. Terarah, terukur, dan transparan.</p>
       </div>
       <div>
-        <h3 class="text-sm font-semibold tracking-[0.2em] text-gold">PROGRAM</h3>
-        <ul class="mt-5 space-y-3 text-sm text-slate-300">
-          <li><a href="/program" class="hover:text-gold">Program Bimbel</a></li>
-          <li><a href="/tryout" class="hover:text-gold">Tryout CAT</a></li>
-          <li><a href="/#harga" class="hover:text-gold">Paket & Harga</a></li>
-          <li><a href="/#tahapan" class="hover:text-gold">Tahapan Seleksi</a></li>
+        <h3 class="font-sans text-base font-bold text-white">Program</h3>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="/program" class="hover:text-white">Program Bimbel</a></li>
+          <li><a href="/tryout" class="hover:text-white">Tryout CAT</a></li>
+          <li><a href="/#harga" class="hover:text-white">Paket &amp; Harga</a></li>
+          <li><a href="/#tahapan" class="hover:text-white">Tahapan Seleksi</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="text-sm font-semibold tracking-[0.2em] text-gold">PERUSAHAAN</h3>
-        <ul class="mt-5 space-y-3 text-sm text-slate-300">
-          <li><a href="/tentang" class="hover:text-gold">Tentang Kami</a></li>
-          <li><a href="/alumni" class="hover:text-gold">Alumni</a></li>
-          <li><a href="/blog" class="hover:text-gold">Blog</a></li>
-          <li><a href="/kontak" class="hover:text-gold">Kontak</a></li>
+        <h3 class="font-sans text-base font-bold text-white">Perusahaan</h3>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="/tentang" class="hover:text-white">Tentang Kami</a></li>
+          <li><a href="/alumni" class="hover:text-white">Alumni</a></li>
+          <li><a href="/blog" class="hover:text-white">Blog</a></li>
+          <li><a href="/kontak" class="hover:text-white">Kontak</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="text-sm font-semibold tracking-[0.2em] text-gold">KONTAK</h3>
-        <ul class="mt-5 space-y-3 text-sm text-slate-300">
-          <li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 10h6M9 13h4"/></svg><!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx --><a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="hover:text-gold">+62 xxx-xxxx-xxxx (WhatsApp)</a></li>
-          <li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:halo@tarunaprima.example" class="hover:text-gold">halo@tarunaprima.example</a></li>
-          <li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Alamat cabang segera diumumkan</span></li>
+        <h3 class="font-sans text-base font-bold text-white">Kontak</h3>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 10h6M9 13h4"/></svg><!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx --><a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" class="hover:text-white">+62 xxx-xxxx-xxxx (WhatsApp)</a></li>
+          <li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:halo@tarunaprima.example" class="hover:text-white">halo@tarunaprima.example</a></li>
+          <li class="flex gap-2"><svg class="h-5 w-5 shrink-0 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Alamat cabang segera diumumkan</span></li>
         </ul>
         <div class="mt-6 flex gap-3">
-          <a href="#" aria-label="Instagram Taruna Prima" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-slate-300 hover:border-gold hover:text-gold"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="YouTube Taruna Prima" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-slate-300 hover:border-gold hover:text-gold"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="TikTok Taruna Prima" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-slate-300 hover:border-gold hover:text-gold"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11a3.5 3.5 0 11-3.5-3.5M14 3c.5 3 2.5 4.5 5 4.5"/></svg></a>
+          <a href="#" aria-label="Instagram Taruna Prima" class="flex h-11 w-11 items-center justify-center rounded-sm border border-white/25 text-white/70 transition hover:border-white hover:text-white"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="YouTube Taruna Prima" class="flex h-11 w-11 items-center justify-center rounded-sm border border-white/25 text-white/70 transition hover:border-white hover:text-white"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="TikTok Taruna Prima" class="flex h-11 w-11 items-center justify-center rounded-sm border border-white/25 text-white/70 transition hover:border-white hover:text-white"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11a3.5 3.5 0 11-3.5-3.5M14 3c.5 3 2.5 4.5 5 4.5"/></svg></a>
         </div>
       </div>
     </div>
-    <div class="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
+    <div class="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs text-white/70 md:flex-row md:items-center md:justify-between">
       <p>© <span id="year">2026</span> Taruna Prima (nama placeholder). Semua hak dilindungi.</p>
-      <p>Mockup — bukan situs resmi. Tidak berafiliasi dengan TNI, Polri, maupun panitia penerimaan.</p>
+      <p>Mockup, bukan situs resmi. Tidak berafiliasi dengan TNI, Polri, maupun panitia penerimaan.</p>
     </div>
   </div>
 </footer>
 <!-- GANTI: nomor WhatsApp placeholder 62xxxxxxxxxx -->
-<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" aria-label="Chat WhatsApp untuk konsultasi" class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/30 transition hover:scale-105 focus-visible:ring-white isolate">
-  <span aria-hidden="true" class="absolute inset-0 -z-10 animate-pulseRing rounded-full bg-[#25D366]"></span>
+<a href="https://wa.me/62xxxxxxxxxx?text=Halo%20Taruna%20Prima%2C%20saya%20ingin%20konsultasi%20bimbel.%20Nama%3A%20...%20Asal%20kota%3A%20...%20Target%3A%20(Akmil%2FAkpol%2FAAL%2FAAU%2FBintara%2FKedinasan)" target="_blank" rel="noopener" aria-label="Chat WhatsApp untuk konsultasi" class="fixed bottom-5 right-5 z-40 isolate flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1eb857] focus-visible:ring-white">
   <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 10h6M9 13h4"/></svg>
 </a>
 </body>
