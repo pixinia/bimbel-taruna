@@ -16,7 +16,7 @@ Daftar placeholder yang harus diganti sebelum go-live:
 - **Testimoni** — nama, target, dan kutipan adalah contoh. Ganti dengan testimoni asli **dengan izin tertulis**.
 - **Syarat & Ketentuan garansi ikut ulang** — wajib direview penasihat hukum sebelum dipublikasikan.
 - **Link sosial media** (Instagram, YouTube, TikTok) — saat ini `href="#"`.
-- **Domain** `https://bimbel-taruna.vercel.app` (URL mockup sementara) — ada di `<link rel="canonical">`, `og:url`, `og:image`, dan JSON-LD semua halaman. Ganti dengan domain final klien.
+- **Domain** `https://taruna.pixinia.web.id` (URL mockup sementara) — ada di `<link rel="canonical">`, `og:url`, `og:image`, dan JSON-LD semua halaman. Ganti dengan domain final klien.
 
 ## Struktur file
 

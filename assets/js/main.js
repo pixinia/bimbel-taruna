@@ -251,13 +251,123 @@
 
   }
 
+  /* ---------- Program carousel (v6) ---------- */
+  each(document.querySelectorAll('[data-carousel]'), function (root) {
+    var track = root.querySelector('[data-carousel-track]');
+    if (!track) return;
+    var prev = root.querySelector('[data-carousel-prev]');
+    var next = root.querySelector('[data-carousel-next]');
+    var current = root.querySelector('[data-carousel-current]');
+    var bar = root.querySelector('[data-carousel-bar]');
+    var slides = track.children;
+    var count = slides.length;
+    if (!count) return;
+
+    function stepWidth() {
+      var cs = window.getComputedStyle(track);
+      var gap = parseFloat(cs.columnGap || cs.gap) || 0;
+      return slides[0].getBoundingClientRect().width + gap;
+    }
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function currentIndex() {
+      var step = stepWidth();
+      if (!step) return 0;
+      // At the far end every remaining slide is in view, so report the last one.
+      if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 1) return count - 1;
+      return Math.max(0, Math.min(count - 1, Math.round(track.scrollLeft / step)));
+    }
+    function update() {
+      var i = currentIndex();
+      var label = pad(i + 1);
+      if (current && current.textContent !== label) current.textContent = label;
+      if (bar) bar.style.transform = 'scaleX(' + ((i + 1) / count).toFixed(4) + ')';
+      if (prev) prev.disabled = track.scrollLeft <= 1;
+      if (next) next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+    }
+    var ticking = false;
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { update(); ticking = false; });
+    }
+
+    function go(dir) {
+      var step = stepWidth();
+      if (!step) return;
+      var left = dir * step;
+      if (track.scrollBy) {
+        track.scrollBy({ left: left, behavior: reduceMotion ? 'auto' : 'smooth' });
+      } else {
+        track.scrollLeft += left;
+      }
+    }
+
+    if (prev) prev.addEventListener('click', function () { go(-1); });
+    if (next) next.addEventListener('click', function () { go(1); });
+    track.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate, { passive: true });
+
+    // Arrow keys while the track itself has focus.
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    });
+
+    // Mouse drag to scroll. Touch keeps native scrolling.
+    var dragging = false, startX = 0, startLeft = 0, moved = 0, suppressClick = false;
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false;
+      track.classList.remove('is-dragging');
+      var step = stepWidth();
+      if (!step) return;
+      var i = Math.max(0, Math.min(count - 1, Math.round(track.scrollLeft / step)));
+      var target = Math.max(0, Math.min(track.scrollWidth - track.clientWidth, i * step));
+      if (reduceMotion) track.scrollLeft = target;
+      else if (track.scrollTo) track.scrollTo({ left: target, behavior: 'smooth' });
+      else track.scrollLeft = target;
+      suppressClick = moved > 5;
+      setTimeout(function () { suppressClick = false; }, 0);
+    }
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      dragging = true;
+      moved = 0;
+      startX = e.clientX;
+      startLeft = track.scrollLeft;
+      track.classList.add('is-dragging');
+    });
+    // Window-level move/up (no pointer capture: capture would retarget clicks
+    // away from the slide links).
+    window.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > moved) moved = Math.abs(dx);
+      if (moved > 5) {
+        e.preventDefault();
+        track.scrollLeft = startLeft - dx;
+      }
+    }, { passive: false });
+    window.addEventListener('pointerup', endDrag);
+    window.addEventListener('pointercancel', endDrag);
+    track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    track.addEventListener('click', function (e) {
+      if (!suppressClick) return;
+      e.preventDefault();
+      e.stopPropagation();
+      suppressClick = false;
+    }, true);
+
+    update();
+  });
+
   // Roster logos: on touch screens (no hover) light up the logos crossing the
   // middle band of the viewport; tapping (focus) also lights one up.
   var roster = document.querySelector('.roster');
   if (roster && 'IntersectionObserver' in window && window.matchMedia('(hover: none)').matches) {
     var lit = new IntersectionObserver(function (entries) {
       each(entries, function (en) { en.target.classList.toggle('is-lit', en.isIntersecting); });
-    }, { rootMargin: '-38% 0px -38% 0px' });
+    }, { rootMargin: '-44% 0px -44% 0px' });
     each(roster.children, function (li) { lit.observe(li); });
   }
 
