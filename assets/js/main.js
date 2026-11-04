@@ -251,6 +251,16 @@
 
   }
 
+  // Roster logos: on touch screens (no hover) light up the logos crossing the
+  // middle band of the viewport; tapping (focus) also lights one up.
+  var roster = document.querySelector('.roster');
+  if (roster && 'IntersectionObserver' in window && window.matchMedia('(hover: none)').matches) {
+    var lit = new IntersectionObserver(function (entries) {
+      each(entries, function (en) { en.target.classList.toggle('is-lit', en.isIntersecting); });
+    }, { rootMargin: '-38% 0px -38% 0px' });
+    each(roster.children, function (li) { lit.observe(li); });
+  }
+
   // Footer year
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
